@@ -13,12 +13,18 @@ const iessEmployeeEl = document.getElementById('iessEmployee');
 const otherDiscountsEl = document.getElementById('otherDiscounts');
 const netSalaryEl = document.getElementById('netSalary');
 
+const rateUsedEl = document.getElementById('rateUsed');
+const netAnnualEl = document.getElementById('netAnnual');
+
+const btnCopy = document.getElementById('btnCopy');
+
 // default rate 9.45%
 rateEl.value = 9.45;
 
 btn.addEventListener('click', () => {
   const gross = Number(grossEl.value || 0);
-  const rate  = Number(rateEl.value || 0) / 100;
+  const ratePct  = Number(rateEl.value || 0);
+  const rate  = ratePct / 100;
   const extra = Number(extraEl.value || 0);
 
   if (!gross || gross <= 0){
@@ -28,10 +34,43 @@ btn.addEventListener('click', () => {
 
   const iessEmployee = gross * rate;
   const net = gross - iessEmployee - extra;
+  const netAnnual = net * 12;
 
   iessEmployeeEl.textContent = money(iessEmployee);
   otherDiscountsEl.textContent = money(extra);
   netSalaryEl.textContent = money(net);
 
+  rateUsedEl.textContent = `${ratePct.toFixed(2)}%`;
+  netAnnualEl.textContent = money(netAnnual);
+
   results.classList.remove('hidden');
+
+  // scroll to results a bit (nice on mobile)
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+if (btnCopy){
+  btnCopy.addEventListener('click', async () => {
+    const gross = Number(grossEl.value || 0);
+    const ratePct = Number(rateEl.value || 0);
+    const extra = Number(extraEl.value || 0);
+
+    const text =
+`Calculadora Sueldo Neto (Ecuador)
+Bruto: ${money(gross)}
+Tasa IESS usada: ${ratePct.toFixed(2)}%
+Otros descuentos: ${money(extra)}
+IESS empleado: ${iessEmployeeEl?.textContent || ''}
+Neto mensual: ${netSalaryEl?.textContent || ''}
+Neto anual: ${netAnnualEl?.textContent || ''}`;
+
+    try{
+      await navigator.clipboard.writeText(text);
+      btnCopy.textContent = 'Copiado ✅';
+      setTimeout(() => btnCopy.textContent = 'Copiar resultado', 1400);
+    }catch(e){
+      // fallback
+      alert('No se pudo copiar automáticamente. Selecciona y copia manualmente.');
+    }
+  });
+}
