@@ -177,3 +177,10 @@ h1{margin:0 0 10px;font-size:32px}
   font-weight:900;
 }
 .faq p{margin:10px 0 0; line-height:1.5}
+
+/* Make linked mini-cards behave like cards */
+a.mini-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
