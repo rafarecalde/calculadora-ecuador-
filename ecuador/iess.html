@@ -41,7 +41,7 @@
 
 
         <div class="hero-actions">
-          <a class="btn primary" href="#calc">Calcular aporte IESS</a>
+         <button id="btnCalc" class="btn primary full">Calcular aportes</button>
           <a class="btn ghost" href="#calculadoras">Ver más calculadoras</a>
         </div>
       </div>
@@ -88,13 +88,14 @@
           <button id="btnCalc" class="btn primary full">Calcular</button>
 <div class="note">
   <h4>Supuestos (v1)</h4>
-  <ul>
-    <li>Relación de dependencia (estimación referencial).</li>
-    <li>Incluye solo el aporte IESS del <strong>empleado</strong> (tasa editable).</li>
-    <li>No incluye impuesto a la renta ni otros descuentos, salvo el campo “Aporte adicional”.</li>
-  </ul>
+<ul>
+  <li>Relación de dependencia (estimación referencial).</li>
+  <li>Calcula aportes IESS del <strong>empleado</strong> y <strong>empleador</strong> usando tasas editables.</li>
+  <li>No incluye impuesto a la renta, fondos de reserva, décimos, ni otros rubros.</li>
+</ul>
+
 </div>
-        <div id="results" class="results hidden">
+       <div id="results" class="results hidden">
   <h3>Resultado</h3>
 
   <div class="result-row">
@@ -103,24 +104,32 @@
   </div>
 
   <div class="result-row">
-    <span>Otros descuentos</span>
-    <strong id="otherDiscounts">$0.00</strong>
+    <span>Aporte IESS (empleador)</span>
+    <strong id="iessEmployer">$0.00</strong>
   </div>
 
   <div class="result-row">
-    <span>Tasa IESS usada</span>
-    <strong id="rateUsed">0.00%</strong>
-  </div>
-
-  <div class="result-row total">
-    <span>Sueldo neto estimado (mensual)</span>
-    <strong id="netSalary">$0.00</strong>
+    <span>Total aportes (empleado + empleador)</span>
+    <strong id="iessTotal">$0.00</strong>
   </div>
 
   <div class="result-row">
-    <span>Neto anual estimado</span>
-    <strong id="netAnnual">$0.00</strong>
+    <span>Tasa usada (empleado)</span>
+    <strong id="rateUsedEmployee">0.00%</strong>
   </div>
+
+  <div class="result-row">
+    <span>Tasa usada (empleador)</span>
+    <strong id="rateUsedEmployer">0.00%</strong>
+  </div>
+
+  <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
+
+  <p class="small muted">
+    *Cálculo referencial: Aporte = Sueldo × Tasa.
+  </p>
+</div>
+
 
   <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
 
