@@ -41,7 +41,8 @@
 
 
         <div class="hero-actions">
-         <button id="btnCalc" class="btn primary full">Calcular aportes</button>
+         <a class="btn primary" href="#calc">Calcular aportes</a>
+
           <a class="btn ghost" href="#calculadoras">Ver más calculadoras</a>
         </div>
       </div>
@@ -59,29 +60,50 @@
 
     <section class="container" id="calc">
       <div class="grid">
-        <div class="card">
-   <h2>Calculadora de Aportes IESS</h2>
-<p class="muted">Asume relación de dependencia (sector privado). Resultado referencial.</p>
+    <div class="card">
+  <h2>Calculadora de Aportes IESS</h2>
+  <p class="muted">Asume relación de dependencia (sector privado). Resultado referencial.</p>
 
-          <label class="label">Sueldo bruto mensual (USD)</label>
-          <input id="gross" class="input" type="number" inputmode="decimal" placeholder="Ej: 1200" />
+  <label class="label">Sueldo mensual sobre el que aportas (USD)</label>
+  <input
+    id="gross"
+    class="input"
+    type="number"
+    inputmode="decimal"
+    placeholder="Ej: 1200"
+  />
 
-          <div class="row">
-            <div>
-          <label class="label">Sueldo mensual sobre el que aportas (USD)</label>
-<input id="gross" class="input" type="number" inputmode="decimal" placeholder="Ej: 1200" />
+  <div class="row">
+    <div>
+      <label class="label">Tasa IESS empleado</label>
+      <input
+        id="rateEmployee"
+        class="input"
+        type="number"
+        inputmode="decimal"
+        step="0.01"
+      />
+      <div class="hint">Por defecto: 9.45%</div>
+    </div>
 
-<div class="row">
-  <div>
-    <label class="label">Tasa IESS empleado</label>
-    <input id="rateEmployee" class="input" type="number" inputmode="decimal" step="0.01" />
-    <div class="hint">Por defecto: 9.45%</div>
+    <div>
+      <label class="label">Tasa IESS empleador</label>
+      <input
+        id="rateEmployer"
+        class="input"
+        type="number"
+        inputmode="decimal"
+        step="0.01"
+      />
+      <div class="hint">Por defecto: 11.15%</div>
+    </div>
   </div>
-  <div>
-    <label class="label">Tasa IESS empleador</label>
-    <input id="rateEmployer" class="input" type="number" inputmode="decimal" step="0.01" />
-    <div class="hint">Por defecto: 11.15%</div>
-  </div>
+
+  <button id="btnCalc" class="btn primary full" type="button">
+    Calcular aportes
+  </button>
+</div>
+
 </div>
 
 
@@ -123,18 +145,9 @@
     <strong id="rateUsedEmployer">0.00%</strong>
   </div>
 
-  <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
 
-  <p class="small muted">
-    *Cálculo referencial: Aporte = Sueldo × Tasa.
-  </p>
 </div>
 
-
-  <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
-
-  <p class="small muted">
-    *Fórmula simple: Neto = Bruto − IESS empleado − otros descuentos.
   </p>
 </div>
             
