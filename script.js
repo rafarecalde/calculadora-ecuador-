@@ -19,7 +19,7 @@ const netAnnualEl = document.getElementById('netAnnual');
 const btnCopy = document.getElementById('btnCopy');
 
 // default rate 9.45%
-rateEl.value = 9.45;
+if (rateEl) rateEl.value = 9.45;
 
 btn.addEventListener('click', () => {
   const gross = Number(grossEl.value || 0);
@@ -74,3 +74,94 @@ Neto anual: ${netAnnualEl?.textContent || ''}`;
     }
   });
 }
+
+// ------------------------------
+// IESS (Aportes) page logic
+// Runs ONLY if iess inputs exist
+// ------------------------------
+(function initIessAportes(){
+  const gross = document.getElementById('gross');
+  const rateEmployee = document.getElementById('rateEmployee');
+  const rateEmployer = document.getElementById('rateEmployer');
+
+  // If this page doesn't have these fields, do nothing (keeps sueldo-neto working)
+  if (!gross || !rateEmployee || !rateEmployer) return;
+
+  const btnCalc = document.getElementById('btnCalc');
+  const results = document.getElementById('results');
+
+  const iessEmployeeEl = document.getElementById('iessEmployee');
+  const iessEmployerEl = document.getElementById('iessEmployer');
+  const iessTotalEl = document.getElementById('iessTotal');
+  const rateUsedEmployeeEl = document.getElementById('rateUsedEmployee');
+  const rateUsedEmployerEl = document.getElementById('rateUsedEmployer');
+
+  const btnCopy = document.getElementById('btnCopy');
+
+  // Defaults
+  if (!rateEmployee.value) rateEmployee.value = 9.45;
+  if (!rateEmployer.value) rateEmployer.value = 11.15;
+
+  function toPct(n){
+    const x = Number(n || 0);
+    return isFinite(x) ? x : 0;
+  }
+
+  function calc(){
+    const sueldo = Number(gross.value || 0);
+    const empPct = toPct(rateEmployee.value);
+    const erPct  = toPct(rateEmployer.value);
+
+    if (!sueldo || sueldo <= 0){
+      alert('Por favor ingresa un sueldo válido.');
+      return null;
+    }
+
+    const emp = sueldo * (empPct / 100);
+    const er  = sueldo * (erPct / 100);
+    const total = emp + er;
+
+    if (iessEmployeeEl) iessEmployeeEl.textContent = money(emp);
+    if (iessEmployerEl) iessEmployerEl.textContent = money(er);
+    if (iessTotalEl) iessTotalEl.textContent = money(total);
+    if (rateUsedEmployeeEl) rateUsedEmployeeEl.textContent = `${empPct.toFixed(2)}%`;
+    if (rateUsedEmployerEl) rateUsedEmployerEl.textContent = `${erPct.toFixed(2)}%`;
+
+    if (results) {
+      results.classList.remove('hidden');
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    return { sueldo, empPct, erPct, emp, er, total };
+  }
+
+  if (btnCalc){
+    btnCalc.addEventListener('click', () => {
+      calc();
+    });
+  }
+
+  if (btnCopy){
+    btnCopy.addEventListener('click', async () => {
+      const r = calc();
+      if (!r) return;
+
+      const text =
+`Calculadora IESS (Ecuador)
+Sueldo: ${money(r.sueldo)}
+Tasa empleado: ${r.empPct.toFixed(2)}%
+Tasa empleador: ${r.erPct.toFixed(2)}%
+Aporte empleado: ${money(r.emp)}
+Aporte empleador: ${money(r.er)}
+Total aportes: ${money(r.total)}`;
+
+      try{
+        await navigator.clipboard.writeText(text);
+        btnCopy.textContent = 'Copiado ✅';
+        setTimeout(() => btnCopy.textContent = 'Copiar resultado', 1400);
+      }catch(e){
+        alert('No se pudo copiar automáticamente. Selecciona y copia manualmente.');
+      }
+    });
+  }
+})();
