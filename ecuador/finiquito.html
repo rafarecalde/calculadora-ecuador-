@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calculadora Sueldo Neto Ecuador (IESS) — CalculadoraEcuador</title>
+  <meta name="description" content="Calcula tu sueldo neto con IESS en Ecuador. Gratis, rápido y desde tu celular. Incluye aporte IESS del empleado (ajustable). Actualizado 2026." />
+
+  <!-- Social preview (optional but nice) -->
+  <meta property="og:title" content="Calculadora Sueldo Neto Ecuador (IESS)" />
+  <meta property="og:description" content="Calcula tu sueldo neto con IESS en Ecuador. Gratis, rápido y desde tu celular. Actualizado 2026." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">▦</div>
+      <div>
+        <div class="brand-name">CalculadoraEcuador</div>
+        <div class="brand-sub">Calculadoras Laborales</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="active">Inicio</a>
+      <a href="#calculadoras">Calculadoras</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Calculadora de Sueldo Neto (Ecuador)</h1>
+        <p class="lead">
+          Calcula tu sueldo neto estimado y el aporte IESS del empleado en segundos.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#calc">Calcular Sueldo Neto</a>
+          <a class="btn ghost" href="#calculadoras">Ver más calculadoras</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ad ad-banner" aria-label="Anuncio">
+      <div class="ad-box">
+        <div class="ad-left">
+          <div class="ad-title">Espacio publicitario</div>
+          <div class="ad-text">Ejemplo de banner (AdSense / anuncios)</div>
+        </div>
+        <div class="ad-cta">Anunciar aquí</div>
+      </div>
+    </section>
+
+    <section class="container" id="calc">
+      <div class="grid">
+        <div class="card">
+          <h2>Calculadora Sueldo Neto</h2>
+          <p class="muted">Asume relación de dependencia. Resultado referencial.</p>
+
+          <label class="label">Sueldo bruto mensual (USD)</label>
+          <input id="gross" class="input" type="number" inputmode="decimal" placeholder="Ej: 1200" />
+
+          <div class="row">
+            <div>
+              <label class="label">Tasa aporte IESS empleado</label>
+              <input id="rate" class="input" type="number" inputmode="decimal" step="0.01" />
+              <div class="hint">Por defecto: 9.45%</div>
+            </div>
+            <div>
+              <label class="label">Aporte adicional (opcional)</label>
+              <input id="extra" class="input" type="number" inputmode="decimal" placeholder="0" />
+              <div class="hint">Ej: préstamos / descuentos</div>
+            </div>
+          </div>
+
+          <button id="btnCalc" class="btn primary full">Calcular</button>
+<div class="note">
+  <h4>Supuestos (v1)</h4>
+  <ul>
+    <li>Relación de dependencia (estimación referencial).</li>
+    <li>Incluye solo el aporte IESS del <strong>empleado</strong> (tasa editable).</li>
+    <li>No incluye impuesto a la renta ni otros descuentos, salvo el campo “Aporte adicional”.</li>
+  </ul>
+</div>
+        <div id="results" class="results hidden">
+  <h3>Resultado</h3>
+
+  <div class="result-row">
+    <span>Aporte IESS (empleado)</span>
+    <strong id="iessEmployee">$0.00</strong>
+  </div>
+
+  <div class="result-row">
+    <span>Otros descuentos</span>
+    <strong id="otherDiscounts">$0.00</strong>
+  </div>
+
+  <div class="result-row">
+    <span>Tasa IESS usada</span>
+    <strong id="rateUsed">0.00%</strong>
+  </div>
+
+  <div class="result-row total">
+    <span>Sueldo neto estimado (mensual)</span>
+    <strong id="netSalary">$0.00</strong>
+  </div>
+
+  <div class="result-row">
+    <span>Neto anual estimado</span>
+    <strong id="netAnnual">$0.00</strong>
+  </div>
+
+  <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
+
+  <p class="small muted">
+    *Fórmula simple: Neto = Bruto − IESS empleado − otros descuentos.
+  </p>
+</div>
+            
+
+  
+          </div>
+        </div>
+
+        <aside class="side">
+          <div class="card">
+            <h3>Calculadoras populares</h3>
+            <ul class="list">
+              <li><a href="#">Aportes IESS (Empleado/Empleador) — próximamente</a></li>
+              <li><a href="#">Décimo Tercero — próximamente</a></li>
+              <li><a href="#">Liquidación / Finiquito — próximamente</a></li>
+            </ul>
+          </div>
+
+          <div class="ad ad-rect" aria-label="Anuncio lateral">
+            <div class="ad-rect-box">
+              <div class="ad-title">Anuncio</div>
+              <div class="ad-text">Ejemplo de anuncio 300x250</div>
+            </div>
+          </div>
+
+          <div class="card" id="contacto">
+            <h3>Contacto</h3>
+            <p class="muted">¿Eres empresa y necesitas ayuda con nómina?</p>
+            <a class="btn whatsapp full" href="#">Habla por WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container" id="calculadoras">
+      <h2>Más calculadoras</h2>
+      <div class="cards">
+        <div class="mini-card">
+          <div class="mini-title">Aportes IESS</div>
+          <div class="mini-sub">Empleado y empleador</div>
+          <div class="tag">Próximamente</div>
+        </div>
+        <div class="mini-card">
+          <div class="mini-title">Décimo Tercero</div>
+          <div class="mini-sub">Bono navideño</div>
+          <div class="tag">Próximamente</div>
+        </div>
+        <div class="mini-card">
+          <div class="mini-title">Liquidación</div>
+          <div class="mini-sub">Estimación finiquito</div>
+          <div class="tag">Próximamente</div>
+        </div>
+      </div>
+    </section>
+<section class="container" id="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <div class="faq">
+    <details>
+      <summary>¿Cómo se calcula el sueldo neto en Ecuador?</summary>
+      <p class="muted">
+        En esta versión (v1) calculamos el neto como: sueldo bruto mensual menos el aporte IESS del empleado y menos cualquier descuento adicional que ingreses.
+      </p>
+    </details>
+
+    <details>
+      <summary>¿Qué porcentaje descuenta el IESS al empleado?</summary>
+      <p class="muted">
+        Usamos una tasa por defecto (editable) para que puedas ajustarla si cambia o si deseas simular escenarios. Revisa siempre la normativa vigente.
+      </p>
+    </details>
+
+    <details>
+      <summary>¿Esto incluye impuesto a la renta, décimos o fondos de reserva?</summary>
+      <p class="muted">
+        No en v1. La meta es mantener la calculadora simple y confiable. Más adelante podemos añadir módulos para décimos, fondos de reserva y otros componentes.
+      </p>
+    </details>
+  </div>
+</section>
+    <section class="ad ad-footer" aria-label="Anuncio">
+      <div class="ad-box">
+        <div class="ad-left">
+          <div class="ad-title">Espacio publicitario</div>
+          <div class="ad-text">Ejemplo de banner inferior</div>
+        </div>
+        <div class="ad-cta">Anunciar aquí</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="muted">Fórmulas referenciales. Última actualización: Enero 2026.</div>
+        <div class="muted">© 2026 CalculadoraEcuador</div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
