@@ -380,4 +380,62 @@ select:disabled,
 input:disabled {
   color: rgba(255,255,255,.55) !important;
 }
+/* ================================
+   Tool cards grid (global)
+   ================================ */
 
+.cards-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+  margin-top:12px;
+}
+
+.tool-card{
+  display:block;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  background: var(--card);
+  text-decoration:none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.tool-card:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+
+.tool-title{
+  font-weight:800;
+  font-size:16px;
+  margin-bottom:6px;
+  color: var(--text);
+}
+
+.tool-desc{
+  font-size:14px;
+  line-height:1.35;
+  color: var(--muted);
+}
+
+.tool-cta{
+  margin-top:10px;
+  font-weight:700;
+  font-size:14px;
+  color: var(--text);
+  opacity:.9;
+}
+
+/* Responsive */
+@media (min-width:720px){
+  .cards-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media (min-width:1024px){
+  .cards-grid{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
