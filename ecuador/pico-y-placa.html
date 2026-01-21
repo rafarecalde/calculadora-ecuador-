@@ -1,0 +1,55 @@
+<section class="card verifier" id="pico-y-placa-quito">
+  <h2>Verificador de Pico y Placa (Quito)</h2>
+  <p class="muted">
+    Ingresa el último dígito de tu placa y el día en que deseas circular. Te diremos si puedes circular o
+    si hay restricción en horas pico.
+  </p>
+
+  <form class="verifier-form" id="pypForm" autocomplete="off">
+    <div class="grid">
+      <label class="field">
+        <span>Último dígito de la placa</span>
+        <input
+          id="plateDigit"
+          type="number"
+          inputmode="numeric"
+          min="0"
+          max="9"
+          placeholder="Ej: 7"
+          required
+        />
+      </label>
+
+      <label class="field">
+        <span>Día en que deseas circular</span>
+        <select id="daySelect" required>
+          <option value="" selected disabled>Selecciona un día</option>
+          <option value="lunes">Lunes</option>
+          <option value="martes">Martes</option>
+          <option value="miercoles">Miércoles</option>
+          <option value="jueves">Jueves</option>
+          <option value="viernes">Viernes</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="btn-primary">Verificar</button>
+      <button type="button" class="btn-secondary" id="clearBtn">Limpiar</button>
+    </div>
+  </form>
+
+  <div class="result" id="pypResult" aria-live="polite"></div>
+
+  <div class="assumptions">
+    <h3>Supuestos</h3>
+    <ul>
+      <li>Este verificador está diseñado únicamente para <strong>Quito</strong>.</li>
+      <li>Esquema típico: Lunes (1–2), Martes (3–4), Miércoles (5–6), Jueves (7–8), Viernes (9–0).</li>
+      <li>Horarios usuales: mañana <strong>06:00–09:30</strong> y tarde <strong>16:00–20:00</strong>.</li>
+      <li>Los municipios pueden cambiar reglas y excepciones. Uso referencial.</li>
+    </ul>
+  </div>
+</section>
