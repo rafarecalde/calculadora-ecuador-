@@ -52,12 +52,15 @@
     En Quito, el Pico y Placa aplica de lunes a viernes según el último dígito de la placa.
     Antes de salir, verifica si tu vehículo tiene restricción en horas pico.
   </p>
+    <div class="result" id="todayBox" aria-live="polite" style="margin-top:12px;">
+  Cargando verificación de hoy…
+</div>
+
 </section>
 
   <!-- AdSense Top Banner -->
-<div class="ad ad-top">
-  <!-- AdSense code here -->
-</div>
+<!-- <div class="ad ad-top"></div> -->
+
   <section class="card verifier" id="pico-y-placa-quito">
     <h2>Verificador de Pico y Placa (Quito)</h2>
     <p class="muted">
@@ -69,15 +72,8 @@
       <div class="grid">
         <label class="field">
           <span>Último dígito de la placa</span>
-          <input
-            id="plateDigit"
-            type="number"
-            inputmode="numeric"
-            min="0"
-            max="9"
-            placeholder="Ej: 7"
-            required
-          />
+    <input id="plateDigit" type="text" inputmode="numeric" pattern="[0-9]" maxlength="1" ...>
+
         </label>
 
         <label class="field">
@@ -107,18 +103,19 @@
 <div class="ad ad-middle">
   <!-- AdSense code here -->
 </div>
-    <div class="assumptions">
-      <h3>Supuestos</h3>
-      <ul>
-        <li>Este verificador aplica únicamente para <strong>Quito</strong>.</li>
-        <li>Esquema típico: Lunes (1–2), Martes (3–4), Miércoles (5–6), Jueves (7–8), Viernes (9–0).</li>
-        <li>Horarios usuales: mañana <strong>06:00–09:30</strong> y tarde <strong>16:00–20:00</strong>.</li>
-        <li>Uso referencial. Las reglas pueden cambiar por ordenanza municipal.</li>
-      </ul>
-    </div>
-  </section>
+<div class="assumptions">
+  <h3>Supuestos</h3>
+  <ul>
+    <li>Este verificador aplica únicamente para <strong>Quito</strong> (Distrito Metropolitano).</li>
+    <li>Esquema típico por último dígito: Lunes (1–2), Martes (3–4), Miércoles (5–6), Jueves (7–8), Viernes (9–0).</li>
+    <li>Horarios usuales: mañana <strong>06:00–09:30</strong> y tarde <strong>16:00–20:00</strong> (referencial).</li>
+    <li>La restricción se reporta para <strong>vehículos y motocicletas</strong> (referencial).</li>
+    <li>Multas pueden variar por reincidencia y cambios normativos (referencial).</li>
+    <li>Las reglas pueden cambiar por ordenanza municipal o disposiciones especiales.</li>
+  </ul>
+</div>
 
-</main>
+  </section>
 <!-- AdSense Footer -->
 <div class="ad ad-footer">
   <!-- AdSense code here -->
@@ -143,10 +140,12 @@
     Circular en horario restringido puede implicar multa económica y reducción de puntos en la licencia.
   </p>
 
-  <h3>¿Aplica para motos?</h3>
-  <p>
-    Generalmente no, pero esto puede cambiar según ordenanzas municipales vigentes.
-  </p>
+<h3>¿Aplica para motos?</h3>
+<p>
+  En Quito, la restricción suele reportarse para <strong>vehículos y motocicletas</strong>. 
+  Como puede haber cambios o excepciones, confirma siempre con comunicados oficiales del día.
+</p>
+
 </section>
   <section class="card" id="ecuador-tools">
   <h2>Calculadoras en Ecuador</h2>
@@ -210,23 +209,33 @@
 </section>
 
 
-  <section class="card">
-  <h2>Fuentes oficiales y referencias</h2>
+<section class="card">
+  <h2>Fuentes y referencias</h2>
   <ul>
-    <li>
-      Agencia Metropolitana de Tránsito (AMT) – Comunicados oficiales
-    </li>
-    <li>
-      Municipio del Distrito Metropolitano de Quito – Ordenanzas de tránsito
-    </li>
+    <li>Agencia Metropolitana de Tránsito (AMT) – comunicados y reportes públicos.</li>
+    <li>Municipio del Distrito Metropolitano de Quito – ordenanzas y normativa.</li>
+    <li>Horario y aplicación (referencial) reportados en medios citando AMT.</li>
   </ul>
-  <p class="muted">
-    Esta página resume información pública de carácter referencial.
-  </p>
+  <p class="small"><strong>Última actualización:</strong> 21 de enero de 2026.</p>
+  <p class="muted small">Consejo: antes de salir, confirma novedades del día (cierres, operativos, cambios temporales).</p>
 </section>
-<footer>
-  Información referencial. No constituye asesoría legal ni administrativa.
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="muted">
+      <a href="../legal/privacy.html">Política de Privacidad</a> ·
+      <a href="../legal/terms.html">Términos de Uso</a> ·
+      <a href="../legal/disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="muted">
+      Información referencial. No constituye asesoría legal ni administrativa.
+    </div>
+    <div class="muted">© 2026 CalculadoraEcuador</div>
+  </div>
 </footer>
+
+
+</main>
 
 <script>
 (() => {
@@ -300,6 +309,21 @@
     resultBox.innerHTML = "";
     digitInput.focus();
   });
+  // "Hoy" automático (solo info por día; el usuario igual puede verificar manualmente)
+const todayBox = document.getElementById("todayBox");
+if (todayBox) {
+  const dayMap = ["domingo","lunes","martes","miercoles","jueves","viernes","sabado"];
+  const now = new Date();
+  const today = dayMap[now.getDay()];
+  const isWeekend = (today === "sabado" || today === "domingo");
+
+  todayBox.innerHTML = isWeekend
+    ? `<div class="title">Hoy: ${today.charAt(0).toUpperCase() + today.slice(1)}</div>
+       <div>Normalmente <strong>no aplica</strong> Pico y Placa en fines de semana (salvo disposición especial).</div>`
+    : `<div class="title">Hoy: ${today.charAt(0).toUpperCase() + today.slice(1)}</div>
+       <div>Usa el verificador con tu último dígito para ver si tienes restricción en horas pico.</div>`;
+}
+
 })();
 </script>
 
