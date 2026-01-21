@@ -265,3 +265,24 @@ p, li, td, th, label, input, select, textarea {
 .muted, .small {
   color: rgba(255, 255, 255, 0.72);
 }
+.card,
+.section,
+.calculator,
+.verifier {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+input,
+select,
+textarea {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
