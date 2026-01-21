@@ -253,3 +253,15 @@ a.mini-card {
 @media (min-width: 820px) {
   .verifier-form .grid { grid-template-columns: 1fr 1fr; }
 }
+/* Ensure readable text on dark theme */
+body {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+p, li, td, th, label, input, select, textarea {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.muted, .small {
+  color: rgba(255, 255, 255, 0.72);
+}
