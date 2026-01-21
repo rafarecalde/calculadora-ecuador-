@@ -1,225 +1,324 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <title>Finiquito Ecuador: calculadora 2026 (vacaciones y décimos proporcionales)</title>
+  <meta name="description" content="Calculadora referencial de finiquito en Ecuador: vacaciones no gozadas y décimos proporcionales. Incluye supuestos, ejemplos y preguntas frecuentes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Calculadora Sueldo Neto Ecuador (IESS) — CalculadoraEcuador</title>
-  <meta name="description" content="Calcula tu sueldo neto con IESS en Ecuador. Gratis, rápido y desde tu celular. Incluye aporte IESS del empleado (ajustable). Actualizado 2026." />
+  <!-- If you already have a global CSS, link it here and delete the <style> block -->
+  <!-- <link rel="stylesheet" href="/assets/styles.css"> -->
 
-  <!-- Social preview (optional but nice) -->
-  <meta property="og:title" content="Calculadora Sueldo Neto Ecuador (IESS)" />
-  <meta property="og:description" content="Calcula tu sueldo neto con IESS en Ecuador. Gratis, rápido y desde tu celular. Actualizado 2026." />
-  <meta property="og:type" content="website" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; background:#f6f7f9; color:#111; }
+    header { background:#fff; border-bottom:1px solid rgba(0,0,0,.08); padding:16px; }
+    header h1 { margin:0; font-size:22px; }
+    header .sub { margin-top:6px; color:rgba(0,0,0,.65); font-size:14px; }
 
-  <link rel="stylesheet" href="../style.css">
+    main { max-width: 980px; margin:0 auto; padding:16px; }
+
+    .card { background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:12px; padding:16px; margin-bottom:14px; }
+    .muted { color:rgba(0,0,0,.65); }
+    .small { font-size:14px; color:rgba(0,0,0,.7); }
+
+    .ad { border:1px dashed rgba(0,0,0,.25); border-radius:12px; padding:14px; background:#fff; margin:14px 0; }
+    .ad .label { font-size:12px; color:rgba(0,0,0,.55); margin-bottom:6px; }
+
+    .grid { display:grid; grid-template-columns: 1fr; gap:12px; }
+    .field span { display:block; font-size:14px; margin-bottom:6px; color: rgba(0,0,0,.75); }
+    .field input, .field select {
+      width:100%; padding:10px 12px; border-radius:10px;
+      border:1px solid rgba(0,0,0,.15); font-size:16px;
+    }
+
+    .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    button { padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,.15); cursor:pointer; font-weight:600; }
+    .btn-primary { background:#0b5fff; border-color:#0b5fff; color:#fff; }
+    .btn-secondary { background:#fff; color:rgba(0,0,0,.8); }
+
+    .result { margin-top:12px; padding:12px; border-radius:10px; border:1px solid rgba(0,0,0,.12); background: rgba(11,95,255,.06); }
+    .result .title { font-weight:700; margin-bottom:6px; }
+    .result .line { margin:6px 0; }
+    .result hr { border:none; border-top:1px solid rgba(0,0,0,.12); margin:10px 0; }
+
+    table { width:100%; border-collapse: collapse; margin-top:10px; }
+    th, td { text-align:left; padding:10px; border-bottom:1px solid rgba(0,0,0,.10); vertical-align: top; }
+    th { font-size:14px; color:rgba(0,0,0,.70); }
+
+    .links ul { margin:0; padding-left:18px; }
+    footer { padding:16px; text-align:center; font-size:14px; color: rgba(0,0,0,.6); }
+
+    @media (min-width: 900px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+  </style>
 </head>
+
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo">▦</div>
-      <div>
-        <div class="brand-name">CalculadoraEcuador</div>
-        <div class="brand-sub">Calculadoras Laborales</div>
-      </div>
+<header>
+  <h1>Finiquito en Ecuador</h1>
+  <div class="sub">Calculadora referencial (vacaciones y décimos proporcionales). Última actualización: 20 de enero de 2026.</div>
+</header>
+
+<main>
+
+  <section class="card">
+    <h2>¿Qué es el finiquito?</h2>
+    <p class="muted">
+      El <strong>finiquito</strong> es la liquidación de valores pendientes al finalizar una relación laboral.
+      En la práctica puede incluir: pagos pendientes, <strong>vacaciones no gozadas</strong>, y valores proporcionales
+      como <strong>décimo tercero</strong> y <strong>décimo cuarto</strong>, entre otros conceptos según el caso.
+    </p>
+
+    <!-- Ad Slot 1 (Top banner) -->
+    <div class="ad ad-top">
+      <div class="label">Anuncio</div>
+      <!-- Pega aquí tu bloque AdSense (banner superior) -->
     </div>
 
-    <nav class="nav">
-      <a href="#" class="active">Inicio</a>
-      <a href="#calculadoras">Calculadoras</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+    <table aria-label="Qué incluye un finiquito (resumen)">
+      <thead>
+        <tr>
+          <th>Concepto</th>
+          <th>Cuándo aplica</th>
+          <th>Cómo se estima</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vacaciones no gozadas</td>
+          <td>Si el trabajador tenía días acumulados sin tomar</td>
+          <td>(Sueldo diario) × (días pendientes)</td>
+        </tr>
+        <tr>
+          <td>Décimo tercero proporcional</td>
+          <td>Si no se pagó o no está mensualizado</td>
+          <td>(Total remuneraciones del período) ÷ 12</td>
+        </tr>
+        <tr>
+          <td>Décimo cuarto proporcional</td>
+          <td>Según período aplicable (referencial)</td>
+          <td>Proporción del valor anual</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <h1>Calculadora de Sueldo Neto (Ecuador)</h1>
-        <p class="lead">
-          Calcula tu sueldo neto estimado y el aporte IESS del empleado en segundos.
-        </p>
+    <p class="small">
+      Esta calculadora es una guía práctica y <strong>no sustituye</strong> una liquidación oficial.
+      Si hay despido intempestivo u otros rubros, pueden existir componentes adicionales.
+    </p>
+  </section>
 
-        <div class="hero-actions">
-          <a class="btn primary" href="#calc">Calcular Sueldo Neto</a>
-          <a class="btn ghost" href="#calculadoras">Ver más calculadoras</a>
-        </div>
+  <section class="card" id="calculadora-finiquito">
+    <h2>Calculadora de finiquito (v1)</h2>
+    <p class="muted">
+      Ingresa tu remuneración y lo que tengas pendiente. El resultado muestra un estimado por rubro y un total aproximado.
+    </p>
+
+    <form id="finForm" autocomplete="off">
+      <div class="grid two">
+
+        <label class="field">
+          <span>Remuneración mensual (USD)</span>
+          <input id="salary" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ej: 900.00" required>
+        </label>
+
+        <label class="field">
+          <span>Días de vacaciones pendientes</span>
+          <input id="vacDays" type="number" inputmode="numeric" min="0" step="0.5" placeholder="Ej: 5">
+        </label>
+
+        <label class="field">
+          <span>Total remuneraciones para décimo tercero (USD)</span>
+          <input id="dtTotal" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ej: 6500.00">
+        </label>
+
+        <label class="field">
+          <span>¿Incluir décimo cuarto proporcional?</span>
+          <select id="includeD14">
+            <option value="no" selected>No</option>
+            <option value="si">Sí (estimado simple)</option>
+          </select>
+        </label>
+
+        <label class="field" id="d14ValueField" style="display:none;">
+          <span>Valor anual del décimo cuarto (USD)</span>
+          <input id="d14Annual" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ej: 460.00">
+        </label>
+
+        <label class="field" id="d14MonthsField" style="display:none;">
+          <span>Meses trabajados para décimo cuarto (1–12)</span>
+          <input id="d14Months" type="number" inputmode="numeric" min="1" max="12" step="1" placeholder="Ej: 8">
+        </label>
+
       </div>
-    </section>
 
-    <section class="ad ad-banner" aria-label="Anuncio">
-      <div class="ad-box">
-        <div class="ad-left">
-          <div class="ad-title">Espacio publicitario</div>
-          <div class="ad-text">Ejemplo de banner (AdSense / anuncios)</div>
-        </div>
-        <div class="ad-cta">Anunciar aquí</div>
+      <div class="actions">
+        <button type="submit" class="btn-primary">Calcular</button>
+        <button type="button" class="btn-secondary" id="clearBtn">Limpiar</button>
       </div>
-    </section>
+    </form>
 
-    <section class="container" id="calc">
-      <div class="grid">
-        <div class="card">
-          <h2>Calculadora Sueldo Neto</h2>
-          <p class="muted">Asume relación de dependencia. Resultado referencial.</p>
+    <div class="result" id="finResult" aria-live="polite">
+      <div class="title">Resultado</div>
+      <div class="muted">Completa los datos y presiona “Calcular”.</div>
+    </div>
 
-          <label class="label">Sueldo bruto mensual (USD)</label>
-          <input id="gross" class="input" type="number" inputmode="decimal" placeholder="Ej: 1200" />
+    <!-- Ad Slot 2 (In-content / after interaction) -->
+    <div class="ad ad-middle">
+      <div class="label">Anuncio</div>
+      <!-- Pega aquí tu bloque AdSense (in-content) -->
+    </div>
 
-          <div class="row">
-            <div>
-              <label class="label">Tasa aporte IESS empleado</label>
-              <input id="rate" class="input" type="number" inputmode="decimal" step="0.01" />
-              <div class="hint">Por defecto: 9.45%</div>
-            </div>
-            <div>
-              <label class="label">Aporte adicional (opcional)</label>
-              <input id="extra" class="input" type="number" inputmode="decimal" placeholder="0" />
-              <div class="hint">Ej: préstamos / descuentos</div>
-            </div>
-          </div>
+    <h3>Cómo estimamos (simple y transparente)</h3>
+    <ul>
+      <li><strong>Sueldo diario:</strong> remuneración mensual ÷ 30 (aproximación práctica).</li>
+      <li><strong>Vacaciones:</strong> sueldo diario × días pendientes.</li>
+      <li><strong>Décimo tercero:</strong> total remuneraciones ÷ 12.</li>
+      <li><strong>Décimo cuarto:</strong> (valor anual × meses trabajados) ÷ 12 (si lo activas).</li>
+    </ul>
+    <p class="small muted">Si tu caso incluye otros rubros (bonos, comisiones, horas extras, indemnizaciones), el total real puede variar.</p>
+  </section>
 
-          <button id="btnCalc" class="btn primary full">Calcular</button>
-<div class="note">
-  <h4>Supuestos (v1)</h4>
-  <ul>
-    <li>Relación de dependencia (estimación referencial).</li>
-    <li>Incluye solo el aporte IESS del <strong>empleado</strong> (tasa editable).</li>
-    <li>No incluye impuesto a la renta ni otros descuentos, salvo el campo “Aporte adicional”.</li>
-  </ul>
-</div>
-        <div id="results" class="results hidden">
-  <h3>Resultado</h3>
+  <section class="card">
+    <h2>Preguntas frecuentes</h2>
 
-  <div class="result-row">
-    <span>Aporte IESS (empleado)</span>
-    <strong id="iessEmployee">$0.00</strong>
+    <h3>¿El finiquito incluye indemnización por despido intempestivo?</h3>
+    <p>No necesariamente. Esta calculadora cubre rubros comunes (vacaciones y décimos). Si existe indemnización u otros pagos, se deben calcular aparte según el caso.</p>
+
+    <h3>¿Qué pasa si no sé mi total de remuneraciones para el décimo tercero?</h3>
+    <p>Puedes estimarlo sumando tus ingresos del período (sueldos y remuneraciones aplicables). Si tus ingresos fueron estables, puedes aproximar con “sueldo mensual × meses”.</p>
+
+    <h3>¿El sueldo diario es siempre sueldo ÷ 30?</h3>
+    <p>Es una aproximación práctica para estimar. En liquidaciones reales pueden existir criterios específicos o rubros que cambian el cálculo.</p>
+
+    <h3>¿Puedo usar esto como documento oficial?</h3>
+    <p>No. Es una herramienta informativa para estimar montos.</p>
+  </section>
+
+  <section class="card links">
+    <h2>Calculadoras útiles en Ecuador</h2>
+    <ul>
+      <li><a href="/ecuador/sueldo-neto.html">Sueldo neto</a></li>
+      <li><a href="/ecuador/iess.html">Aportes IESS</a></li>
+      <li><a href="/ecuador/decimo-tercero.html">Décimo tercero</a></li>
+      <li><a href="/ecuador/decimo-cuarto.html">Décimo cuarto</a></li>
+      <li><a href="/ecuador/feriados-ecuador.html">Feriados Ecuador 2026</a></li>
+    </ul>
+  </section>
+
+  <!-- Ad Slot 3 (Footer banner) -->
+  <div class="ad ad-footer">
+    <div class="label">Anuncio</div>
+    <!-- Pega aquí tu bloque AdSense (footer) -->
   </div>
 
-  <div class="result-row">
-    <span>Otros descuentos</span>
-    <strong id="otherDiscounts">$0.00</strong>
-  </div>
+</main>
 
-  <div class="result-row">
-    <span>Tasa IESS usada</span>
-    <strong id="rateUsed">0.00%</strong>
-  </div>
+<footer>
+  Uso referencial. No constituye asesoría legal ni administrativa.
+</footer>
 
-  <div class="result-row total">
-    <span>Sueldo neto estimado (mensual)</span>
-    <strong id="netSalary">$0.00</strong>
-  </div>
+<script>
+(() => {
+  const form = document.getElementById("finForm");
 
-  <div class="result-row">
-    <span>Neto anual estimado</span>
-    <strong id="netAnnual">$0.00</strong>
-  </div>
+  const salary = document.getElementById("salary");
+  const vacDays = document.getElementById("vacDays");
+  const dtTotal = document.getElementById("dtTotal");
 
-  <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
+  const includeD14 = document.getElementById("includeD14");
+  const d14ValueField = document.getElementById("d14ValueField");
+  const d14MonthsField = document.getElementById("d14MonthsField");
+  const d14Annual = document.getElementById("d14Annual");
+  const d14Months = document.getElementById("d14Months");
 
-  <p class="small muted">
-    *Fórmula simple: Neto = Bruto − IESS empleado − otros descuentos.
-  </p>
-</div>
-            
+  const resultBox = document.getElementById("finResult");
+  const clearBtn = document.getElementById("clearBtn");
 
-  
-          </div>
-        </div>
+  function money(n) {
+    return new Intl.NumberFormat("es-EC", { style: "currency", currency: "USD" }).format(n);
+  }
 
-        <aside class="side">
-          <div class="card">
-            <h3>Calculadoras populares</h3>
-            <ul class="list">
-              <li><a href="#">Aportes IESS (Empleado/Empleador) — próximamente</a></li>
-              <li><a href="#">Décimo Tercero — próximamente</a></li>
-              <li><a href="#">Liquidación / Finiquito — próximamente</a></li>
-            </ul>
-          </div>
+  function render(html) { resultBox.innerHTML = html; }
 
-          <div class="ad ad-rect" aria-label="Anuncio lateral">
-            <div class="ad-rect-box">
-              <div class="ad-title">Anuncio</div>
-              <div class="ad-text">Ejemplo de anuncio 300x250</div>
-            </div>
-          </div>
+  function toggleD14() {
+    const on = includeD14.value === "si";
+    d14ValueField.style.display = on ? "" : "none";
+    d14MonthsField.style.display = on ? "" : "none";
+    d14Annual.required = on;
+    d14Months.required = on;
+  }
 
-          <div class="card" id="contacto">
-            <h3>Contacto</h3>
-            <p class="muted">¿Eres empresa y necesitas ayuda con nómina?</p>
-            <a class="btn whatsapp full" href="#">Habla por WhatsApp</a>
-          </div>
-        </aside>
-      </div>
-    </section>
+  toggleD14();
+  includeD14.addEventListener("change", toggleD14);
 
-    <section class="container" id="calculadoras">
-      <h2>Más calculadoras</h2>
-      <div class="cards">
-        <div class="mini-card">
-          <div class="mini-title">Aportes IESS</div>
-          <div class="mini-sub">Empleado y empleador</div>
-          <div class="tag">Próximamente</div>
-        </div>
-        <div class="mini-card">
-          <div class="mini-title">Décimo Tercero</div>
-          <div class="mini-sub">Bono navideño</div>
-          <div class="tag">Próximamente</div>
-        </div>
-        <div class="mini-card">
-          <div class="mini-title">Liquidación</div>
-          <div class="mini-sub">Estimación finiquito</div>
-          <div class="tag">Próximamente</div>
-        </div>
-      </div>
-    </section>
-<section class="container" id="faq">
-  <h2>Preguntas frecuentes</h2>
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  <div class="faq">
-    <details>
-      <summary>¿Cómo se calcula el sueldo neto en Ecuador?</summary>
-      <p class="muted">
-        En esta versión (v1) calculamos el neto como: sueldo bruto mensual menos el aporte IESS del empleado y menos cualquier descuento adicional que ingreses.
-      </p>
-    </details>
+    const s = Number(salary.value);
+    if (!isFinite(s) || s < 0) {
+      render(`<div class="title">Revisa tus datos</div><div>Ingresa una remuneración mensual válida.</div>`);
+      return;
+    }
 
-    <details>
-      <summary>¿Qué porcentaje descuenta el IESS al empleado?</summary>
-      <p class="muted">
-        Usamos una tasa por defecto (editable) para que puedas ajustarla si cambia o si deseas simular escenarios. Revisa siempre la normativa vigente.
-      </p>
-    </details>
+    const daily = s / 30;
 
-    <details>
-      <summary>¿Esto incluye impuesto a la renta, décimos o fondos de reserva?</summary>
-      <p class="muted">
-        No en v1. La meta es mantener la calculadora simple y confiable. Más adelante podemos añadir módulos para décimos, fondos de reserva y otros componentes.
-      </p>
-    </details>
-  </div>
-</section>
-    <section class="ad ad-footer" aria-label="Anuncio">
-      <div class="ad-box">
-        <div class="ad-left">
-          <div class="ad-title">Espacio publicitario</div>
-          <div class="ad-text">Ejemplo de banner inferior</div>
-        </div>
-        <div class="ad-cta">Anunciar aquí</div>
-      </div>
-    </section>
+    const vdays = Number(vacDays.value || 0);
+    if (!isFinite(vdays) || vdays < 0) {
+      render(`<div class="title">Revisa tus datos</div><div>Días de vacaciones pendientes debe ser 0 o un número positivo.</div>`);
+      return;
+    }
+    const vacPay = daily * vdays;
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="muted">Fórmulas referenciales. Última actualización: Enero 2026.</div>
-        <div class="muted">© 2026 CalculadoraEcuador</div>
-        <a href="../legal/privacy.html">Política de Privacidad</a> ·
-<a href="../legal/terms.html">Términos de Uso</a> ·
-<a href="../legal/disclaimer.html">Disclaimer</a>
-      </div>
-    </footer>
-  </main>
+    const totalForD13 = Number(dtTotal.value || 0);
+    if (!isFinite(totalForD13) || totalForD13 < 0) {
+      render(`<div class="title">Revisa tus datos</div><div>Total remuneraciones para décimo tercero debe ser 0 o un número positivo.</div>`);
+      return;
+    }
+    const d13 = totalForD13 > 0 ? (totalForD13 / 12) : 0;
 
-  <script src="../script.js"></script>
+    let d14 = 0;
+    if (includeD14.value === "si") {
+      const annual = Number(d14Annual.value);
+      const months = Number(d14Months.value);
+      if (!isFinite(annual) || annual < 0) {
+        render(`<div class="title">Revisa tus datos</div><div>Ingresa un valor anual válido para décimo cuarto.</div>`);
+        return;
+      }
+      if (!Number.isInteger(months) || months < 1 || months > 12) {
+        render(`<div class="title">Revisa tus datos</div><div>Meses trabajados para décimo cuarto debe ser un entero entre 1 y 12.</div>`);
+        return;
+      }
+      d14 = (annual * months) / 12;
+    }
+
+    const total = vacPay + d13 + d14;
+
+    render(`
+      <div class="title">Resultado (estimado)</div>
+      <div class="line"><strong>Sueldo diario (aprox.):</strong> ${money(daily)}</div>
+      <hr>
+      <div class="line"><strong>Vacaciones no gozadas:</strong> ${money(vacPay)} <span class="small muted">(${vdays} días)</span></div>
+      <div class="line"><strong>Décimo tercero proporcional:</strong> ${money(d13)} <span class="small muted">(total ÷ 12)</span></div>
+      <div class="line"><strong>Décimo cuarto proporcional:</strong> ${money(d14)} ${includeD14.value === "si" ? `<span class="small muted">(prorrateado)</span>` : `<span class="small muted">(no incluido)</span>`}</div>
+      <hr>
+      <div class="line"><strong>Total estimado:</strong> ${money(total)}</div>
+      <div class="small muted">Este cálculo no incluye indemnizaciones u otros rubros pendientes.</div>
+    `);
+  });
+
+  clearBtn.addEventListener("click", () => {
+    salary.value = "";
+    vacDays.value = "";
+    dtTotal.value = "";
+    includeD14.value = "no";
+    d14Annual.value = "";
+    d14Months.value = "";
+    toggleD14();
+    render(`<div class="title">Resultado</div><div class="muted">Completa los datos y presiona “Calcular”.</div>`);
+    salary.focus();
+  });
+})();
+</script>
+
 </body>
 </html>
