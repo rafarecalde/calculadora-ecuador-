@@ -340,4 +340,44 @@ input::placeholder, textarea::placeholder{
 /* Text safety */
 p, li, label, td, th, span{ color: var(--text); }
 .muted, .small{ color: var(--muted); }
+/* === FORCE DARK THEME OVERRIDES (Pico y Placa + calculators) === */
+
+/* Any calculator / verifier block */
+.verifier,
+.calculator,
+.results,
+.result,
+.assumptions {
+  background: var(--card) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border);
+}
+
+/* Result box text */
+.result,
+.result * {
+  color: var(--text) !important;
+}
+
+/* Form fields */
+.field label,
+.field span {
+  color: var(--muted) !important;
+}
+
+/* Inputs & selects */
+input,
+select,
+textarea {
+  background: var(--input) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+}
+
+/* Placeholder + disabled text */
+input::placeholder,
+select:disabled,
+input:disabled {
+  color: rgba(255,255,255,.55) !important;
+}
 
