@@ -6,14 +6,13 @@
   <meta name="description" content="Calculadora referencial de finiquito en Ecuador: vacaciones no gozadas y décimos proporcionales. Incluye supuestos, ejemplos y preguntas frecuentes.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- If you already have a global CSS, link it here and delete the <style> block -->
-  <!-- <link rel="stylesheet" href="/assets/styles.css"> -->
 
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3261870146358135"
      crossorigin="anonymous"></script>
   
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="/style.css">
+
     
 </head>
 
@@ -53,20 +52,20 @@
       <div class="label">Anuncio</div>
       <!-- Pega aquí tu bloque AdSense (banner superior) -->
     </div>
-<section class="card" id="indemnizacion-link">
-  <h2>¿Hubo despido intempestivo?</h2>
+<div class="note" id="indemnizacion-link">
+  <h3>¿Hubo despido intempestivo?</h3>
   <p class="muted">
     Esta calculadora de finiquito estima rubros comunes como <strong>vacaciones</strong> y <strong>décimos proporcionales</strong>.
     Si la terminación fue un <strong>despido intempestivo</strong>, puede existir una <strong>indemnización adicional</strong>
     que depende del tiempo trabajado (años/meses) y de la remuneración base.
   </p>
-  <p>
-    <a href="/ecuador/despido-intempestivo.html">Calcular indemnización por despido intempestivo</a>
+  <p style="margin: 0;">
+    <a class="btn ghost" href="/ecuador/despido-intempestivo.html">Calcular despido intempestivo →</a>
   </p>
-  <p class="small muted">
+  <p class="small muted" style="margin-top: 10px;">
     Nota: la indemnización no siempre aplica (depende del tipo de salida y del caso). Esta página es referencial.
   </p>
-</section>
+</div>
     <table aria-label="Qué incluye un finiquito (resumen)">
       <thead>
         <tr>
@@ -101,7 +100,7 @@
   </section>
 
   <section class="card" id="calculadora-finiquito">
-    <h2>Calculadora de finiquito (v1)</h2>
+    <h2>Calculadora de finiquito </h2>
     <p class="muted">
       Ingresa tu remuneración y lo que tengas pendiente. El resultado muestra un estimado por rubro y un total aproximado.
     </p>
@@ -170,7 +169,34 @@
     </ul>
     <p class="small muted">Si tu caso incluye otros rubros (bonos, comisiones, horas extras, indemnizaciones), el total real puede variar.</p>
   </section>
+<section class="card">
+  <h2>Qué NO incluye esta calculadora</h2>
+  <p class="muted">
+    Este estimado cubre <strong>vacaciones</strong> y <strong>décimos proporcionales</strong>. En un finiquito real pueden existir otros rubros,
+    según el caso y la documentación.
+  </p>
+  <ul class="list">
+    <li><strong>Sueldo pendiente</strong> (días trabajados no pagados).</li>
+    <li><strong>Horas extras</strong>, recargos, comisiones o bonos pendientes.</li>
+    <li><strong>Indemnizaciones</strong> (por ejemplo, despido intempestivo u otros escenarios).</li>
+    <li>Ajustes por <strong>anticipos</strong>, préstamos o descuentos autorizados.</li>
+  </ul>
+  <p class="small muted">
+    Si quieres, luego hacemos una “v2” para incluir sueldo pendiente y horas extras con un par de campos extra.
+  </p>
+</section>
+<section class="card">
+  <h2>Checklist rápido antes de firmar un finiquito</h2>
+  <ul class="list">
+    <li>Confirma tu <strong>fecha de ingreso</strong> y <strong>fecha de salida</strong>.</li>
+    <li>Verifica cuántos <strong>días de vacaciones</strong> realmente te quedan (si aplica).</li>
+    <li>Revisa si tu <strong>décimo tercero</strong> y <strong>décimo cuarto</strong> estaban mensualizados o acumulados.</li>
+    <li>Si hubo despido, confirma si corresponde <strong>indemnización</strong> (no siempre aplica).</li>
+    <li>Guarda respaldo: rol de pagos, actas, correos y cualquier documento de liquidación.</li>
+  </ul>
+</section>
 
+  
   <section class="card">
     <h2>Preguntas frecuentes</h2>
 
@@ -187,7 +213,7 @@
     <p>No. Es una herramienta informativa para estimar montos.</p>
   </section>
 
-  <section class="card" id="ecuador-tools">
+<section class="card" id="calculadoras">
   <h2>Calculadoras en Ecuador</h2>
   <p class="muted">Herramientas laborales y utilidades prácticas. Resultados referenciales.</p>
 
@@ -256,10 +282,17 @@
   </div>
 
 </main>
-
-<footer>
-  Uso referencial. No constituye asesoría legal ni administrativa.
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="muted">
+      <a href="/legal/privacy.html">Política de Privacidad</a> ·
+      <a href="/legal/terms.html">Términos de Uso</a> ·
+      <a href="/legal/disclaimer.html">Disclaimer</a>
+    </div>
+    <div class="muted">© 2026 CalculadoraEcuador</div>
+  </div>
 </footer>
+
 
 <script>
 (() => {
