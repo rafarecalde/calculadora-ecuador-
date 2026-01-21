@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Despido intempestivo Ecuador: calculadora de indemnización (Art. 188) 2026</title>
+  <meta name="description" content="Calculadora referencial de indemnización por despido intempestivo en Ecuador (Código del Trabajo, Art. 188). Incluye años/meses, tope 25 meses y FAQs.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Si ya tienes CSS global, enlázalo aquí y borra el <style> -->
+  <!-- <link rel="stylesheet" href="/assets/styles.css"> -->
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; background:#f6f7f9; color:#111; }
+    header { background:#fff; border-bottom:1px solid rgba(0,0,0,.08); padding:16px; }
+    header h1 { margin:0; font-size:22px; }
+    header .sub { margin-top:6px; color:rgba(0,0,0,.65); font-size:14px; }
+
+    main { max-width: 980px; margin:0 auto; padding:16px; }
+
+    .card { background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:12px; padding:16px; margin-bottom:14px; }
+    .muted { color:rgba(0,0,0,.65); }
+    .small { font-size:14px; color:rgba(0,0,0,.7); }
+    .pill { display:inline-block; padding:4px 10px; border-radius:999px; border:1px solid rgba(0,0,0,.12); background: rgba(11,95,255,.06); font-size:13px; }
+
+    .ad { border:1px dashed rgba(0,0,0,.25); border-radius:12px; padding:14px; background:#fff; margin:14px 0; }
+    .ad .label { font-size:12px; color:rgba(0,0,0,.55); margin-bottom:6px; }
+
+    .grid { display:grid; grid-template-columns: 1fr; gap:12px; }
+    .field span { display:block; font-size:14px; margin-bottom:6px; color: rgba(0,0,0,.75); }
+    .field input, .field select {
+      width:100%; padding:10px 12px; border-radius:10px;
+      border:1px solid rgba(0,0,0,.15); font-size:16px;
+    }
+
+    .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    button { padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,.15); cursor:pointer; font-weight:600; }
+    .btn-primary { background:#0b5fff; border-color:#0b5fff; color:#fff; }
+    .btn-secondary { background:#fff; color:rgba(0,0,0,.8); }
+
+    .result { margin-top:12px; padding:12px; border-radius:10px; border:1px solid rgba(0,0,0,.12); background: rgba(11,95,255,.06); }
+    .result .title { font-weight:700; margin-bottom:6px; }
+    .result .line { margin:6px 0; }
+    .result hr { border:none; border-top:1px solid rgba(0,0,0,.12); margin:10px 0; }
+
+    table { width:100%; border-collapse: collapse; margin-top:10px; }
+    th, td { text-align:left; padding:10px; border-bottom:1px solid rgba(0,0,0,.10); vertical-align: top; }
+    th { font-size:14px; color:rgba(0,0,0,.70); }
+
+    .links ul { margin:0; padding-left:18px; }
+    footer { padding:16px; text-align:center; font-size:14px; color: rgba(0,0,0,.6); }
+
+    @media (min-width: 900px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Despido intempestivo en Ecuador</h1>
+  <div class="sub">Calculadora referencial de indemnización (Código del Trabajo, Art. 188). Última actualización: 20 de enero de 2026.</div>
+</header>
+
+<main>
+
+  <section class="card">
+    <h2>Qué se calcula aquí</h2>
+    <p class="muted">
+      Esta página calcula la <strong>indemnización por despido intempestivo</strong> según el <strong>Art. 188</strong> del Código del Trabajo:
+      <br>
+      • Hasta <strong>3 años</strong> de servicio: <strong>3 meses</strong> de remuneración.
+      <br>
+      • Más de <strong>3 años</strong>: <strong>1 mes por cada año</strong> de servicio (con tope de <strong>25 meses</strong>).
+      <br>
+      • La <strong>fracción de año</strong> se considera como <strong>año completo</strong>.
+    </p>
+    <p class="small muted">
+      Esto es distinto del “finiquito” (vacaciones, décimos proporcionales, sueldo pendiente). Aquí es solo indemnización por despido intempestivo.
+    </p>
+
+    <!-- Ad Slot 1 (Top banner) -->
+    <div class="ad ad-top">
+      <div class="label">Anuncio</div>
+      <!-- Pega aquí tu bloque AdSense (banner superior) -->
+    </div>
+
+    <table aria-label="Resumen de reglas">
+      <thead>
+        <tr>
+          <th>Tiempo de servicio</th>
+          <th>Indemnización (Art. 188)</th>
+          <th>Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0 a 3 años</td>
+          <td><span class="pill">3 meses</span> de remuneración</td>
+          <td>Aplica incluso si fueron 2 años y 11 meses.</td>
+        </tr>
+        <tr>
+          <td>Más de 3 años</td>
+          <td><span class="pill">1 mes por año</span> (máx. <span class="pill">25 meses</span>)</td>
+          <td>Si hay meses adicionales, se redondea al año completo.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card" id="calculadora">
+    <h2>Calculadora de indemnización (Art. 188)</h2>
+    <p class="muted">
+      Ingresa tu <strong>última remuneración mensual</strong> y el tiempo trabajado. Si trabajaste “X años y Y meses”, los meses cuentan como fracción.
+    </p>
+
+    <form id="diForm" autocomplete="off">
+      <div class="grid two">
+        <label class="field">
+          <span>Última remuneración mensual (USD)</span>
+          <input id="salary" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ej: 900.00" required>
+        </label>
+
+        <label class="field">
+          <span>Años completos trabajados</span>
+          <input id="years" type="number" inputmode="numeric" min="0" step="1" placeholder="Ej: 4" required>
+        </label>
+
+        <label class="field">
+          <span>Meses adicionales (0–11)</span>
+          <input id="months" type="number" inputmode="numeric" min="0" max="11" step="1" placeholder="Ej: 2" required>
+        </label>
+
+        <label class="field">
+          <span>Opcional: incluir “bonificación por desahucio” (25% por año)</span>
+          <select id="includeDesahucio">
+            <option value="no" selected>No (solo Art. 188)</option>
+            <option value="si">Sí (estimado referencial)</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-primary">Calcular</button>
+        <button type="button" class="btn-secondary" id="clearBtn">Limpiar</button>
+      </div>
+    </form>
+
+    <div class="result" id="diResult" aria-live="polite">
+      <div class="title">Resultado</div>
+      <div class="muted">Completa los datos y presiona “Calcular”.</div>
+    </div>
+
+    <!-- Ad Slot 2 (In-content / after interaction) -->
+    <div class="ad ad-middle">
+      <div class="label">Anuncio</div>
+      <!-- Pega aquí tu bloque AdSense (in-content) -->
+    </div>
+
+    <h3>Supuestos (claros)</h3>
+    <ul>
+      <li>Se usa la <strong>última remuneración mensual</strong> como base.</li>
+      <li>Para “más de 3 años”, si existe cualquier fracción (meses &gt; 0), se redondea al <strong>año completo</strong>.</li>
+      <li>Tope máximo: <strong>25 meses</strong> de remuneración para la fórmula de “1 mes por año”.</li>
+      <li>El “desahucio (25%)” es opcional porque depende del escenario y no siempre aplica; aquí se muestra solo como referencia.</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿Esto es lo mismo que el finiquito?</h3>
+    <p>No. El finiquito incluye rubros pendientes (vacaciones, décimos, sueldo pendiente, etc.). Esto es <strong>indemnización por despido intempestivo</strong>.</p>
+
+    <h3>Si trabajé 3 años exactos, ¿me toca 3 meses o 3 meses por año?</h3>
+    <p>La regla dice “hasta tres años” = <strong>3 meses</strong>. La fórmula “1 mes por año” aplica cuando es <strong>más de 3 años</strong>.</p>
+
+    <h3>Si trabajé 4 años y 1 mes, ¿cuántos meses se cuentan?</h3>
+    <p>Para el caso “más de 3 años”, la fracción se considera como año completo: 4 años y 1 mes se cuenta como <strong>5 años</strong> (referencial).</p>
+
+    <h3>¿Siempre hay que pagar desahucio además?</h3>
+    <p>No necesariamente. Por eso está como opción “estimado referencial”. En la práctica depende de la causal y del trámite aplicable.</p>
+  </section>
+
+  <section class="card links">
+    <h2>Fuentes y referencias</h2>
+    <ul>
+      <li>Código del Trabajo, Art. 188 (indemnización por despido intempestivo).</li>
+      <li>Calculadoras del Ministerio del Trabajo (referencia pública).</li>
+    </ul>
+    <p class="small muted">Información referencial; las reglas pueden tener matices según el caso concreto.</p>
+  </section>
+
+  <section class="card links">
+    <h2>Más herramientas en Ecuador</h2>
+    <ul>
+      <li><a href="/ecuador/finiquito.html">Finiquito (vacaciones + décimos)</a></li>
+      <li><a href="/ecuador/decimo-tercero.html">Décimo tercero</a></li>
+      <li><a href="/ecuador/decimo-cuarto.html">Décimo cuarto</a></li>
+      <li><a href="/ecuador/sueldo-neto.html">Sueldo neto</a></li>
+      <li><a href="/ecuador/iess.html">Aportes IESS</a></li>
+    </ul>
+  </section>
+
+  <!-- Ad Slot 3 (Footer banner) -->
+  <div class="ad ad-footer">
+    <div class="label">Anuncio</div>
+    <!-- Pega aquí tu bloque AdSense (footer) -->
+  </div>
+
+</main>
+
+<footer>
+  Uso referencial. No constituye asesoría legal ni administrativa.
+</footer>
+
+<script>
+(() => {
+  const form = document.getElementById("diForm");
+  const salaryEl = document.getElementById("salary");
+  const yearsEl = document.getElementById("years");
+  const monthsEl = document.getElementById("months");
+  const includeDesahucioEl = document.getElementById("includeDesahucio");
+  const resultBox = document.getElementById("diResult");
+  const clearBtn = document.getElementById("clearBtn");
+
+  function money(n) {
+    return new Intl.NumberFormat("es-EC", { style: "currency", currency: "USD" }).format(n);
+  }
+  function render(html) { resultBox.innerHTML = html; }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const salary = Number(salaryEl.value);
+    const years = Number(yearsEl.value);
+    const months = Number(monthsEl.value);
+
+    if (!isFinite(salary) || salary <= 0) {
+      render(`<div class="title">Revisa tus datos</div><div>Ingresa una remuneración mensual válida.</div>`);
+      return;
+    }
+    if (!Number.isInteger(years) || years < 0) {
+      render(`<div class="title">Revisa tus datos</div><div>Los años deben ser un número entero (0 o más).</div>`);
+      return;
+    }
+    if (!Number.isInteger(months) || months < 0 || months > 11) {
+      render(`<div class="title">Revisa tus datos</div><div>Los meses deben estar entre 0 y 11.</div>`);
+      return;
+    }
+
+    const totalYearsExact = years + (months / 12);
+
+    // Art. 188:
+    // - Hasta 3 años: 3 meses
+    // - Más de 3 años: 1 mes por cada año, fracción cuenta como año completo, tope 25 meses
+    let monthsIndemn = 0;
+    let rule = "";
+
+    if (totalYearsExact <= 3) {
+      monthsIndemn = 3;
+      rule = "Hasta 3 años: 3 meses de remuneración (Art. 188).";
+    } else {
+      const yearsRoundedUp = years + (months > 0 ? 1 : 0); // fracción cuenta como año completo
+      monthsIndemn = Math.min(yearsRoundedUp, 25);
+      rule = `Más de 3 años: 1 mes por cada año (fracción redondea) con tope 25 meses (Art. 188).`;
+    }
+
+    const indemnArt188 = monthsIndemn * salary;
+
+    // Opcional: bonificación por desahucio (Art. 185) como estimado:
+    // 25% de la última remuneración por cada año de servicio (fracción como año completo en práctica común)
+    // Lo mostramos como "estimado" porque no siempre aplica.
+    let desahucio = 0;
+    let yearsForDesahucio = 0;
+
+    if (includeDesahucioEl.value === "si") {
+      yearsForDesahucio = years + (months > 0 ? 1 : 0);
+      desahucio = (0.25 * salary) * yearsForDesahucio;
+    }
+
+    const total = indemnArt188 + desahucio;
+
+    render(`
+      <div class="title">Resultado</div>
+      <div class="line"><strong>Base (última remuneración mensual):</strong> ${money(salary)}</div>
+      <div class="line"><strong>Tiempo ingresado:</strong> ${years} años y ${months} meses</div>
+      <hr>
+      <div class="line"><strong>Indemnización Art. 188:</strong> ${money(indemnArt188)}</div>
+      <div class="small muted">${rule}</div>
+      ${includeDesahucioEl.value === "si" ? `
+        <hr>
+        <div class="line"><strong>Bonificación por desahucio (estimado):</strong> ${money(desahucio)}</div>
+        <div class="small muted">Cálculo referencial: 25% × remuneración mensual × años (redondeando fracción).</div>
+      ` : ``}
+      <hr>
+      <div class="line"><strong>Total estimado (si aplica):</strong> ${money(total)}</div>
+      <div class="small muted">Este total no incluye finiquito (vacaciones, décimos, sueldo pendiente) ni otras indemnizaciones/casos especiales.</div>
+    `);
+  });
+
+  clearBtn.addEventListener("click", () => {
+    salaryEl.value = "";
+    yearsEl.value = "";
+    monthsEl.value = "";
+    includeDesahucioEl.value = "no";
+    render(`<div class="title">Resultado</div><div class="muted">Completa los datos y presiona “Calcular”.</div>`);
+    salaryEl.focus();
+  });
+})();
+</script>
+
+</body>
+</html>
