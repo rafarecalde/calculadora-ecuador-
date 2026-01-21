@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Décimo Cuarto Ecuador: cálculo 2026, cuándo se paga y verificador</title>
+  <meta name="description" content="Calcula el Décimo Cuarto en Ecuador (referencial). Incluye cálculo proporcional por meses, explicación clara, cuándo se paga y preguntas frecuentes.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- If you already have a global CSS, link it here and delete the <style> block -->
+  <!-- <link rel="stylesheet" href="/assets/styles.css"> -->
+
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin:0; background:#f6f7f9; color:#111; }
+    header { background:#fff; border-bottom:1px solid rgba(0,0,0,.08); padding:16px; }
+    header h1 { margin:0; font-size:22px; }
+    header .sub { margin-top:6px; color:rgba(0,0,0,.65); font-size:14px; }
+
+    main { max-width: 980px; margin:0 auto; padding:16px; }
+
+    .card { background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:12px; padding:16px; margin-bottom:14px; }
+    .muted { color:rgba(0,0,0,.65); }
+    .small { font-size:14px; color:rgba(0,0,0,.7); }
+    .pill { display:inline-block; padding:4px 10px; border-radius:999px; border:1px solid rgba(0,0,0,.12); background: rgba(11,95,255,.06); font-size:13px; }
+
+    .ad { border:1px dashed rgba(0,0,0,.25); border-radius:12px; padding:14px; background:#fff; margin:14px 0; }
+    .ad .label { font-size:12px; color:rgba(0,0,0,.55); margin-bottom:6px; }
+
+    .grid { display:grid; grid-template-columns: 1fr; gap:12px; }
+    .field span { display:block; font-size:14px; margin-bottom:6px; color: rgba(0,0,0,.75); }
+    .field input, .field select {
+      width:100%; padding:10px 12px; border-radius:10px;
+      border:1px solid rgba(0,0,0,.15); font-size:16px;
+    }
+
+    .actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    button { padding:10px 14px; border-radius:10px; border:1px solid rgba(0,0,0,.15); cursor:pointer; font-weight:600; }
+    .btn-primary { background:#0b5fff; border-color:#0b5fff; color:#fff; }
+    .btn-secondary { background:#fff; color:rgba(0,0,0,.8); }
+
+    .result { margin-top:12px; padding:12px; border-radius:10px; border:1px solid rgba(0,0,0,.12); background: rgba(11,95,255,.06); }
+    .result .title { font-weight:700; margin-bottom:6px; }
+    .result .line { margin:6px 0; }
+    .result hr { border:none; border-top:1px solid rgba(0,0,0,.12); margin:10px 0; }
+
+    table { width:100%; border-collapse: collapse; margin-top:10px; }
+    th, td { text-align:left; padding:10px; border-bottom:1px solid rgba(0,0,0,.10); vertical-align: top; }
+    th { font-size:14px; color:rgba(0,0,0,.70); }
+
+    .links ul { margin:0; padding-left:18px; }
+    footer { padding:16px; text-align:center; font-size:14px; color: rgba(0,0,0,.6); }
+
+    @media (min-width: 900px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+
+<body>
+<header>
+  <h1>Décimo Cuarto en Ecuador</h1>
+  <div class="sub">Cálculo referencial + guía práctica (proporcional y mensualizado). Última actualización: 20 de enero de 2026.</div>
+</header>
+
+<main>
+
+  <section class="card">
+    <h2>¿Qué es el Décimo Cuarto?</h2>
+    <p class="muted">
+      El <strong>décimo cuarto</strong> es un beneficio laboral que, en términos generales, corresponde a un valor
+      anual equivalente a un salario base de referencia (comúnmente asociado al <strong>Salario Básico Unificado</strong>),
+      pagado de forma <strong>acumulada</strong> o <strong>mensualizada</strong> según la modalidad aplicable.
+    </p>
+    <p class="small muted">
+      Para un cálculo exacto pueden influir: período aplicable (Costa/Galápagos vs Sierra/Amazonía), modalidad de pago,
+      y reglas específicas de remuneración. Esta página es referencial.
+    </p>
+
+    <!-- Ad Slot 1 (Top banner) -->
+    <div class="ad ad-top">
+      <div class="label">Anuncio</div>
+      <!-- Pega aquí tu bloque AdSense (banner superior) -->
+    </div>
+
+    <table aria-label="Resumen rápido del décimo cuarto">
+      <thead>
+        <tr>
+          <th>Modalidad</th>
+          <th>Cómo se paga</th>
+          <th>Cómo se estima (simple)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="pill">Acumulado</span></td>
+          <td>Un pago anual (según el período aplicable).</td>
+          <td>Valor anual × (meses trabajados ÷ 12)</td>
+        </tr>
+        <tr>
+          <td><span class="pill">Mensualizado</span></td>
+          <td>Prorrateado mes a mes.</td>
+          <td>Valor anual ÷ 12</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card" id="calculadora-decimo-cuarto">
+    <h2>Calculadora del Décimo Cuarto</h2>
+    <p class="muted">
+      Ingresa el <strong>valor anual</strong> que aplica (por ejemplo, el SBU del año correspondiente) y los meses trabajados.
+      También puedes ver el valor mensualizado.
+    </p>
+
+    <form id="d14Form" autocomplete="off">
+      <div class="grid two">
+        <label class="field">
+          <span>Valor anual del décimo cuarto (USD)</span>
+          <input id="annualValue" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ej: 460.00" required>
+        </label>
+
+        <label class="field">
+          <span>Meses trabajados en el período (1–12)</span>
+          <input id="months" type="number" inputmode="numeric" min="1" max="12" step="1" placeholder="Ej: 12" required>
+        </label>
+
+        <label class="field">
+          <span>¿Quieres ver el mensualizado?</span>
+          <select id="showMonthly">
+            <option value="si" selected>Sí</option>
+            <option value="no">No</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Redondeo</span>
+          <select id="rounding">
+            <option value="2" selected>2 decimales</option>
+            <option value="0">0 decimales</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-primary">Calcular</button>
+        <button type="button" class="btn-secondary" id="clearBtn">Limpiar</button>
+      </div>
+    </form>
+
+    <div class="result" id="d14Result" aria-live="polite">
+      <div class="title">Resultado</div>
+      <div class="muted">Completa los datos y presiona “Calcular”.</div>
+    </div>
+
+    <!-- Ad Slot 2 (In-content / after interaction) -->
+    <div class="ad ad-middle">
+      <div class="label">Anuncio</div>
+      <!-- Pega aquí tu bloque AdSense (in-content) -->
+    </div>
+
+    <h3>Ejemplos rápidos</h3>
+    <ul>
+      <li>Si el valor anual es USD 460 y trabajaste 12 meses: proporcional = 460 × (12/12) = 460.</li>
+      <li>Si trabajaste 6 meses: proporcional = 460 × (6/12) = 230.</li>
+      <li>Mensualizado: 460 ÷ 12 ≈ 38.33 por mes (referencial).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>Cuándo se paga el Décimo Cuarto</h2>
+    <p class="muted">
+      El pago acumulado del décimo cuarto suele depender del <strong>período aplicable</strong> (por región) y del calendario de pago.
+      Si está mensualizado, se prorratea en el sueldo cada mes.
+      Para una fecha exacta, conviene confirmarla con tu empleador o con la fuente oficial vigente.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Preguntas frecuentes</h2>
+
+    <h3>¿El décimo cuarto es igual para todos?</h3>
+    <p>El valor anual suele estar asociado a un salario base de referencia, pero el pago puede variar por proporcionalidad (meses trabajados) y modalidad.</p>
+
+    <h3>¿Qué pasa si trabajé menos de 12 meses?</h3>
+    <p>Normalmente se paga de forma <strong>proporcional</strong>. Esta calculadora aplica la proporción (meses ÷ 12).</p>
+
+    <h3>¿Puede pagarse mensualizado?</h3>
+    <p>En muchos casos sí. La mensualización suele equivaler a <strong>valor anual ÷ 12</strong>, como estimación práctica.</p>
+
+    <h3>¿Este cálculo sirve para finiquito?</h3>
+    <p>Puede servir como referencia para estimar un décimo cuarto proporcional pendiente, pero un finiquito real puede incluir otros rubros.</p>
+  </section>
+
+  <section class="card links">
+    <h2>Más calculadoras en Ecuador</h2>
+    <ul>
+      <li><a href="/ecuador/sueldo-neto.html">Sueldo neto</a></li>
+      <li><a href="/ecuador/iess.html">Aportes IESS</a></li>
+      <li><a href="/ecuador/finiquito.html">Finiquito</a></li>
+      <li><a href="/ecuador/decimo-tercero.html">Décimo tercero</a></li>
+      <li><a href="/ecuador/feriados-ecuador.html">Feriados Ecuador 2026</a></li>
+    </ul>
+  </section>
+
+  <!-- Ad Slot 3 (Footer banner) -->
+  <div class="ad ad-footer">
+    <div class="label">Anuncio</div>
+    <!-- Pega aquí tu bloque AdSense (footer) -->
+  </div>
+
+</main>
+
+<footer>
+  Uso referencial. No constituye asesoría legal ni administrativa.
+</footer>
+
+<script>
+(() => {
+  const form = document.getElementById("d14Form");
+  const annualValue = document.getElementById("annualValue");
+  const months = document.getElementById("months");
+  const showMonthly = document.getElementById("showMonthly");
+  const rounding = document.getElementById("rounding");
+  const resultBox = document.getElementById("d14Result");
+  const clearBtn = document.getElementById("clearBtn");
+
+  function money(n, decimals) {
+    const fixed = Number(n).toFixed(decimals);
+    return new Intl.NumberFormat("es-EC", { style: "currency", currency: "USD" }).format(Number(fixed));
+  }
+
+  function render(html) { resultBox.innerHTML = html; }
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const annual = Number(annualValue.value);
+    const m = Number(months.value);
+    const dec = Number(rounding.value);
+
+    if (!isFinite(annual) || annual < 0) {
+      render(`<div class="title">Revisa tus datos</div><div>Ingresa un valor anual válido.</div>`);
+      return;
+    }
+    if (!Number.isInteger(m) || m < 1 || m > 12) {
+      render(`<div class="title">Revisa tus datos</div><div>Meses trabajados debe ser un entero entre 1 y 12.</div>`);
+      return;
+    }
+
+    const proportional = (annual * m) / 12;
+    const monthly = annual / 12;
+
+    const monthlyBlock = (showMonthly.value === "si")
+      ? `<div class="line"><strong>Mensualizado (referencial):</strong> ${money(monthly, dec)} por mes</div>`
+      : "";
+
+    render(`
+      <div class="title">Resultado</div>
+      <div class="line"><strong>Décimo cuarto proporcional:</strong> ${money(proportional, dec)}</div>
+      <div class="small muted">Cálculo: valor anual × (meses ÷ 12)</div>
+      <hr>
+      ${monthlyBlock}
+      <div class="small muted">Nota: el período aplicable y reglas específicas pueden afectar el cálculo real.</div>
+    `);
+  });
+
+  clearBtn.addEventListener("click", () => {
+    annualValue.value = "";
+    months.value = "";
+    showMonthly.value = "si";
+    rounding.value = "2";
+    render(`<div class="title">Resultado</div><div class="muted">Completa los datos y presiona “Calcular”.</div>`);
+    annualValue.focus();
+  });
+})();
+</script>
+
+</body>
+</html>
