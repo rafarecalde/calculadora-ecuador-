@@ -1,331 +1,280 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Décimo Cuarto Ecuador: cálculo 2026, cuándo se paga y verificador</title>
-  <meta name="description" content="Calcula el Décimo Cuarto en Ecuador (referencial). Incluye cálculo proporcional por meses, explicación clara, cuándo se paga y preguntas frecuentes.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- If you already have a global CSS, link it here and delete the <style> block -->
-  <!-- <link rel="stylesheet" href="/assets/styles.css"> -->
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3261870146358135"
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3261870146358135"
      crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/style.css">
+
+  <title>Calculadora Sueldo Neto Ecuador (IESS) — CalculadoraEcuador</title>
+  <meta name="description" content="Calcula tu sueldo neto con IESS en Ecuador. Gratis, rápido y desde tu celular. Incluye aporte IESS del empleado (ajustable). Actualizado 2026." />
+
+  <meta property="og:title" content="Calculadora Sueldo Neto Ecuador (IESS)" />
+  <meta property="og:description" content="Calcula tu sueldo neto con IESS en Ecuador. Gratis, rápido y desde tu celular. Actualizado 2026." />
+  <meta property="og:type" content="website" />
+
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
-<header class="topbar">
-  <div class="brand">
-    <div class="logo">▦</div>
-    <div>
-      <div class="brand-name">CalculadoraEcuador</div>
-      <div class="brand-sub">Herramientas laborales y financieras</div>
-    </div>
-  </div>
-
-  <nav class="nav">
-    <a href="/ecuador/" class="active">Ecuador</a>
-    <a href="#calculadoras">Calculadoras</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
-<section class="hero hero--compact">
-  <h1>Décimo Cuarto en Ecuador</h1>
-  <p class="hero-sub">
-    Cálculo referencial del décimo cuarto sueldo según modalidad de pago.
-  </p>
-</section>
-<main>
-
-  <section class="card">
-    <h2>¿Qué es el Décimo Cuarto?</h2>
-    <p class="muted">
-      El <strong>décimo cuarto</strong> es un beneficio laboral que, en términos generales, corresponde a un valor
-      anual equivalente a un salario base de referencia (comúnmente asociado al <strong>Salario Básico Unificado</strong>),
-      pagado de forma <strong>acumulada</strong> o <strong>mensualizada</strong> según la modalidad aplicable.
-    </p>
-    <p class="small muted">
-      Para un cálculo exacto pueden influir: período aplicable (Costa/Galápagos vs Sierra/Amazonía), modalidad de pago,
-      y reglas específicas de remuneración. Esta página es referencial.
-    </p>
-
-    <!-- Ad Slot 1 (Top banner) -->
-    <div class="ad ad-top">
-      <div class="label">Anuncio</div>
-      <!-- Pega aquí tu bloque AdSense (banner superior) -->
-    </div>
-
-    <table aria-label="Resumen rápido del décimo cuarto">
-      <thead>
-        <tr>
-          <th>Modalidad</th>
-          <th>Cómo se paga</th>
-          <th>Cómo se estima (simple)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="pill">Acumulado</span></td>
-          <td>Un pago anual (según el período aplicable).</td>
-          <td>Valor anual × (meses trabajados ÷ 12)</td>
-        </tr>
-        <tr>
-          <td><span class="pill">Mensualizado</span></td>
-          <td>Prorrateado mes a mes.</td>
-          <td>Valor anual ÷ 12</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="card" id="calculadora-decimo-cuarto">
-    <h2>Calculadora del Décimo Cuarto</h2>
-    <p class="muted">
-      Ingresa el <strong>valor anual</strong> que aplica (por ejemplo, el SBU del año correspondiente) y los meses trabajados.
-      También puedes ver el valor mensualizado.
-    </p>
-
-    <form id="d14Form" autocomplete="off">
-      <div class="grid two">
-        <label class="field">
-          <span>Valor anual del décimo cuarto (USD)</span>
-          <input id="annualValue" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Ej: 460.00" required>
-        </label>
-
-        <label class="field">
-          <span>Meses trabajados en el período (1–12)</span>
-          <input id="months" type="number" inputmode="numeric" min="1" max="12" step="1" placeholder="Ej: 12" required>
-        </label>
-
-        <label class="field">
-          <span>¿Quieres ver el mensualizado?</span>
-          <select id="showMonthly">
-            <option value="si" selected>Sí</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-
-        <label class="field">
-          <span>Redondeo</span>
-          <select id="rounding">
-            <option value="2" selected>2 decimales</option>
-            <option value="0">0 decimales</option>
-          </select>
-        </label>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">▦</div>
+      <div>
+        <div class="brand-name">CalculadoraEcuador</div>
+        <div class="brand-sub">Calculadoras Laborales</div>
       </div>
+    </div>
 
-      <div class="actions">
-        <button type="submit" class="btn-primary">Calcular</button>
-        <button type="button" class="btn-secondary" id="clearBtn">Limpiar</button>
+    <nav class="nav">
+      <a href="/ecuador/" class="active">Ecuador</a>
+      <a href="#ecuador-tools">Calculadoras</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Calculadora de Sueldo Neto (Ecuador)</h1>
+        <p class="lead">
+          Calcula tu sueldo neto estimado y el aporte IESS del empleado en segundos.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#calc">Calcular Sueldo Neto</a>
+          <a class="btn ghost" href="#ecuador-tools">Ver más calculadoras</a>
+        </div>
       </div>
-    </form>
+    </section>
 
-    <div class="result" id="d14Result" aria-live="polite">
-      <div class="title">Resultado</div>
-      <div class="muted">Completa los datos y presiona “Calcular”.</div>
-    </div>
+    <!-- (Opcional) Banner de anuncio: déjalo si estás aprobado o si es solo placeholder visual -->
+    <section class="ad ad-banner" aria-label="Anuncio">
+      <div class="ad-box">
+        <div class="ad-left">
+          <div class="ad-title">Espacio publicitario</div>
+          <div class="ad-text">Ejemplo de banner (AdSense / anuncios)</div>
+        </div>
+        <div class="ad-cta">Anunciar aquí</div>
+      </div>
+    </section>
 
-    <!-- Ad Slot 2 (In-content / after interaction) -->
-    <div class="ad ad-middle">
-      <div class="label">Anuncio</div>
-      <!-- Pega aquí tu bloque AdSense (in-content) -->
-    </div>
+    <section class="container" id="calc">
+      <div class="grid">
 
-    <h3>Ejemplos rápidos</h3>
-    <ul>
-      <li>Si el valor anual es USD 460 y trabajaste 12 meses: proporcional = 460 × (12/12) = 460.</li>
-      <li>Si trabajaste 6 meses: proporcional = 460 × (6/12) = 230.</li>
-      <li>Mensualizado: 460 ÷ 12 ≈ 38.33 por mes (referencial).</li>
-    </ul>
-  </section>
+        <!-- Columna principal -->
+        <div class="card">
+          <h2>Calculadora Sueldo Neto</h2>
+          <p class="muted">Asume relación de dependencia. Resultado referencial.</p>
 
-  <section class="card">
-    <h2>Cuándo se paga el Décimo Cuarto</h2>
-    <p class="muted">
-      El pago acumulado del décimo cuarto suele depender del <strong>período aplicable</strong> (por región) y del calendario de pago.
-      Si está mensualizado, se prorratea en el sueldo cada mes.
-      Para una fecha exacta, conviene confirmarla con tu empleador o con la fuente oficial vigente.
-    </p>
-  </section>
+          <label class="label" for="gross">Sueldo bruto mensual (USD)</label>
+          <input id="gross" class="input" type="number" inputmode="decimal" placeholder="Ej: 1200" />
 
-  <section class="card">
-  <h2>Supuestos y alcance</h2>
-  <ul class="list">
-    <li>El cálculo es referencial y usa la fórmula proporcional: valor anual × (meses ÷ 12).</li>
-    <li>El valor anual puede variar según el año y la referencia aplicable (por ejemplo, SBU).</li>
-    <li>El período de pago puede diferir por región (Costa/Galápagos vs Sierra/Amazonía).</li>
-    <li>No considera particularidades de contratos, jornadas especiales, acuerdos o rubros adicionales.</li>
-  </ul>
-  <p class="small muted">Última actualización: enero 2026.</p>
-</section>
+          <div class="row">
+            <div>
+              <label class="label" for="rate">Tasa aporte IESS empleado</label>
+              <input id="rate" class="input" type="number" inputmode="decimal" step="0.01" />
+              <div class="hint">Por defecto: 9.45%</div>
+            </div>
+            <div>
+              <label class="label" for="extra">Aporte adicional (opcional)</label>
+              <input id="extra" class="input" type="number" inputmode="decimal" placeholder="0" />
+              <div class="hint">Ej: préstamos / descuentos</div>
+            </div>
+          </div>
 
-  <section class="card">
-    <h2>Preguntas frecuentes</h2>
+          <button id="btnCalc" class="btn primary full" type="button">Calcular</button>
 
-    <h3>¿El décimo cuarto es igual para todos?</h3>
-    <p>El valor anual suele estar asociado a un salario base de referencia, pero el pago puede variar por proporcionalidad (meses trabajados) y modalidad.</p>
+          <div class="note">
+            <h4>Supuestos (v1)</h4>
+            <ul>
+              <li>Relación de dependencia (estimación referencial).</li>
+              <li>Incluye solo el aporte IESS del <strong>empleado</strong> (tasa editable).</li>
+              <li>No incluye impuesto a la renta ni otros descuentos, salvo el campo “Aporte adicional”.</li>
+            </ul>
+          </div>
 
-    <h3>¿Qué pasa si trabajé menos de 12 meses?</h3>
-    <p>Normalmente se paga de forma <strong>proporcional</strong>. Esta calculadora aplica la proporción (meses ÷ 12).</p>
+          <div id="results" class="results hidden" aria-live="polite">
+            <h3>Resultado</h3>
 
-    <h3>¿Puede pagarse mensualizado?</h3>
-    <p>En muchos casos sí. La mensualización suele equivaler a <strong>valor anual ÷ 12</strong>, como estimación práctica.</p>
+            <div class="result-row">
+              <span>Aporte IESS (empleado)</span>
+              <strong id="iessEmployee">$0.00</strong>
+            </div>
 
-    <h3>¿Este cálculo sirve para finiquito?</h3>
-    <p>Puede servir como referencia para estimar un décimo cuarto proporcional pendiente, pero un finiquito real puede incluir otros rubros.</p>
-  </section>
+            <div class="result-row">
+              <span>Otros descuentos</span>
+              <strong id="otherDiscounts">$0.00</strong>
+            </div>
 
-<section class="card" id="calculadoras">
-  <h2>Calculadoras en Ecuador</h2>
-  <p class="muted">Herramientas laborales y utilidades prácticas. Resultados referenciales.</p>
+            <div class="result-row">
+              <span>Tasa IESS usada</span>
+              <strong id="rateUsed">0.00%</strong>
+            </div>
 
-  <div class="cards-grid">
-    <a class="tool-card" href="/ecuador/sueldo-neto.html">
-      <div class="tool-title">Sueldo Neto</div>
-      <div class="tool-desc">Estima tu sueldo neto y aporte IESS del empleado.</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+            <div class="result-row total">
+              <span>Sueldo neto estimado (mensual)</span>
+              <strong id="netSalary">$0.00</strong>
+            </div>
 
-    <a class="tool-card" href="/ecuador/iess.html">
-      <div class="tool-title">Aporte IESS</div>
-      <div class="tool-desc">Calcula el aporte del empleado (referencial) y el neto.</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+            <div class="result-row">
+              <span>Neto anual estimado</span>
+              <strong id="netAnnual">$0.00</strong>
+            </div>
 
-    <a class="tool-card" href="/ecuador/finiquito.html">
-      <div class="tool-title">Finiquito</div>
-      <div class="tool-desc">Vacaciones y décimos proporcionales al terminar la relación.</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+            <button id="btnCopy" class="btn ghost full" type="button">Copiar resultado</button>
 
-    <a class="tool-card" href="/ecuador/despido-intempestivo.html">
-      <div class="tool-title">Despido Intempestivo</div>
-      <div class="tool-desc">Estimación referencial de indemnización por despido.</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+            <p class="small muted">
+              *Fórmula simple: Neto = Bruto − IESS empleado − otros descuentos.
+            </p>
+          </div>
+        </div>
 
-    <a class="tool-card" href="/ecuador/horas-extras.html">
-      <div class="tool-title">Horas Extras</div>
-      <div class="tool-desc">Diurnas, nocturnas y feriados (estimado).</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+        <!-- Sidebar -->
+        <aside class="side">
+          <div class="card">
+            <h3>Calculadoras populares</h3>
+            <ul class="list">
+              <li><a href="/ecuador/iess.html">Aportes IESS (Empleado/Empleador)</a></li>
+              <li><a href="/ecuador/decimo-tercero.html">Décimo Tercero</a></li>
+              <li><a href="/ecuador/finiquito.html">Liquidación / Finiquito</a></li>
+            </ul>
+          </div>
 
-    <a class="tool-card" href="/ecuador/decimo-tercero.html">
-      <div class="tool-title">Décimo Tercero</div>
-      <div class="tool-desc">Cálculo proporcional y mensualizado (referencial).</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+          <div class="ad ad-rect" aria-label="Anuncio lateral">
+            <div class="ad-rect-box">
+              <div class="ad-title">Anuncio</div>
+              <div class="ad-text">Ejemplo de anuncio 300x250</div>
+            </div>
+          </div>
 
-    <a class="tool-card" href="/ecuador/decimo-cuarto.html">
-      <div class="tool-title">Décimo Cuarto</div>
-      <div class="tool-desc">Guía práctica + cálculo simple (referencial).</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+          <div class="card" id="contacto">
+            <h3>Contacto</h3>
+            <p class="muted">¿Tienes una sugerencia o detectaste un error?</p>
+            <a class="btn primary full" href="mailto:contacto@calculadoranet.com?subject=Sugerencia%20Calculadora%20Sueldo%20Neto">Escríbenos por email</a>
+            <p class="small muted" style="margin-top:10px;">Respondemos cuando podamos. Esta web es informativa.</p>
+          </div>
+        </aside>
 
-    <a class="tool-card" href="/ecuador/feriados-ecuador.html">
-      <div class="tool-title">Feriados Ecuador</div>
-      <div class="tool-desc">Calendario de feriados y posibles puentes.</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
+      </div>
+    </section>
 
-    <a class="tool-card" href="/ecuador/pico-y-placa.html">
-      <div class="tool-title">Pico y Placa (Quito)</div>
-      <div class="tool-desc">Verifica restricción por último dígito y día.</div>
-      <div class="tool-cta">Abrir →</div>
-    </a>
-  </div>
-</section>
+    <!-- Herramientas -->
+    <section class="card" id="ecuador-tools">
+      <h2>Calculadoras en Ecuador</h2>
+      <p class="muted">Herramientas laborales y utilidades prácticas. Resultados referenciales.</p>
 
+      <div class="cards-grid">
+        <a class="tool-card" href="/ecuador/sueldo-neto.html">
+          <div class="tool-title">Sueldo Neto</div>
+          <div class="tool-desc">Estima tu sueldo neto y aporte IESS del empleado.</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-  <!-- Ad Slot 3 (Footer banner) -->
-  <div class="ad ad-footer">
-    <div class="label">Anuncio</div>
-    <!-- Pega aquí tu bloque AdSense (footer) -->
-  </div>
+        <a class="tool-card" href="/ecuador/iess.html">
+          <div class="tool-title">Aporte IESS</div>
+          <div class="tool-desc">Calcula el aporte del empleado (referencial) y el neto.</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-</main>
+        <a class="tool-card" href="/ecuador/finiquito.html">
+          <div class="tool-title">Finiquito</div>
+          <div class="tool-desc">Vacaciones y décimos proporcionales al terminar la relación.</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-  <section class="card" id="contacto" style="margin-top:16px;">
-  <h2>Contacto</h2>
-  <p class="muted">
-    ¿Sugerencias o una calculadora que quieras ver? Escríbenos y cuéntanos qué dato necesitas calcular.
-  </p>
-  <a class="btn" href="mailto:contacto@calculadoranet.com?subject=Contacto%20-%20Decimo%20Cuarto">Contacto por email</a>
-</section>
+        <a class="tool-card" href="/ecuador/despido-intempestivo.html">
+          <div class="tool-title">Despido Intempestivo</div>
+          <div class="tool-desc">Estimación referencial de indemnización por despido.</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="muted">
-      <a href="/legal/privacy.html">Política de Privacidad</a> ·
-      <a href="/legal/terms.html">Términos de Uso</a> ·
-      <a href="/legal/disclaimer.html">Disclaimer</a>
-    </div>
-    <div class="muted">© 2026 CalculadoraEcuador</div>
-  </div>
-</footer>
+        <a class="tool-card" href="/ecuador/horas-extras.html">
+          <div class="tool-title">Horas Extras</div>
+          <div class="tool-desc">Diurnas, nocturnas y feriados (estimado).</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
+        <a class="tool-card" href="/ecuador/decimo-tercero.html">
+          <div class="tool-title">Décimo Tercero</div>
+          <div class="tool-desc">Cálculo proporcional y mensualizado (referencial).</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-<script>
-(() => {
-  const form = document.getElementById("d14Form");
-  const annualValue = document.getElementById("annualValue");
-  const months = document.getElementById("months");
-  const showMonthly = document.getElementById("showMonthly");
-  const rounding = document.getElementById("rounding");
-  const resultBox = document.getElementById("d14Result");
-  const clearBtn = document.getElementById("clearBtn");
+        <a class="tool-card" href="/ecuador/decimo-cuarto.html">
+          <div class="tool-title">Décimo Cuarto</div>
+          <div class="tool-desc">Guía práctica + cálculo simple (referencial).</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-  function money(n, decimals) {
-    const fixed = Number(n).toFixed(decimals);
-    return new Intl.NumberFormat("es-EC", { style: "currency", currency: "USD" }).format(Number(fixed));
-  }
+        <a class="tool-card" href="/ecuador/feriados-ecuador.html">
+          <div class="tool-title">Feriados Ecuador</div>
+          <div class="tool-desc">Calendario de feriados y posibles puentes.</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
 
-  function render(html) { resultBox.innerHTML = html; }
+        <a class="tool-card" href="/ecuador/pico-y-placa.html">
+          <div class="tool-title">Pico y Placa (Quito)</div>
+          <div class="tool-desc">Verifica restricción por último dígito y día.</div>
+          <div class="tool-cta">Abrir →</div>
+        </a>
+      </div>
+    </section>
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    <section class="container" id="faq">
+      <h2>Preguntas frecuentes</h2>
 
-    const annual = Number(annualValue.value);
-    const m = Number(months.value);
-    const dec = Number(rounding.value);
+      <div class="faq">
+        <details>
+          <summary>¿Cómo se calcula el sueldo neto en Ecuador?</summary>
+          <p class="muted">
+            En esta versión (v1) calculamos el neto como: sueldo bruto mensual menos el aporte IESS del empleado y menos cualquier descuento adicional que ingreses.
+          </p>
+        </details>
 
-    if (!isFinite(annual) || annual < 0) {
-      render(`<div class="title">Revisa tus datos</div><div>Ingresa un valor anual válido.</div>`);
-      return;
-    }
-    if (!Number.isInteger(m) || m < 1 || m > 12) {
-      render(`<div class="title">Revisa tus datos</div><div>Meses trabajados debe ser un entero entre 1 y 12.</div>`);
-      return;
-    }
+        <details>
+          <summary>¿Qué porcentaje descuenta el IESS al empleado?</summary>
+          <p class="muted">
+            Usamos una tasa por defecto (editable) para que puedas ajustarla si cambia o si deseas simular escenarios. Revisa siempre la normativa vigente.
+          </p>
+        </details>
 
-    const proportional = (annual * m) / 12;
-    const monthly = annual / 12;
+        <details>
+          <summary>¿Esto incluye impuesto a la renta, décimos o fondos de reserva?</summary>
+          <p class="muted">
+            No en v1. La meta es mantener la calculadora simple y confiable. Más adelante podemos añadir módulos para décimos, fondos de reserva y otros componentes.
+          </p>
+        </details>
+      </div>
+    </section>
 
-    const monthlyBlock = (showMonthly.value === "si")
-      ? `<div class="line"><strong>Mensualizado (referencial):</strong> ${money(monthly, dec)} por mes</div>`
-      : "";
+    <section class="ad ad-footer" aria-label="Anuncio">
+      <div class="ad-box">
+        <div class="ad-left">
+          <div class="ad-title">Espacio publicitario</div>
+          <div class="ad-text">Ejemplo de banner inferior</div>
+        </div>
+        <div class="ad-cta">Anunciar aquí</div>
+      </div>
+    </section>
 
-    render(`
-      <div class="title">Resultado</div>
-      <div class="line"><strong>Décimo cuarto proporcional:</strong> ${money(proportional, dec)}</div>
-      <div class="small muted">Cálculo: valor anual × (meses ÷ 12)</div>
-      <hr>
-      ${monthlyBlock}
-      <div class="small muted">Nota: el período aplicable y reglas específicas pueden afectar el cálculo real.</div>
-    `);
-  });
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="muted">
+          <a href="../legal/privacy.html">Política de Privacidad</a> ·
+          <a href="../legal/terms.html">Términos de Uso</a> ·
+          <a href="../legal/disclaimer.html">Disclaimer</a>
+        </div>
+        <div class="muted">
+          Información referencial. No constituye asesoría legal ni administrativa.
+        </div>
+        <div class="muted">© 2026 CalculadoraEcuador</div>
+      </div>
+    </footer>
 
-  clearBtn.addEventListener("click", () => {
-    annualValue.value = "";
-    months.value = "";
-    showMonthly.value = "si";
-    rounding.value = "2";
-    render(`<div class="title">Resultado</div><div class="muted">Completa los datos y presiona “Calcular”.</div>`);
-    annualValue.focus();
-  });
-})();
-</script>
+  </main>
 
+  <script src="../script.js"></script>
 </body>
 </html>
