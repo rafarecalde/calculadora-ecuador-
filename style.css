@@ -1,4 +1,19 @@
 :root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,.06);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.70);
+  --border: rgba(255,255,255,.14);
+  --input: rgba(255,255,255,.08);
+}
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(37,99,235,.22), transparent 55%),
+              linear-gradient(180deg, #0b1220, #020617);
+  color: var(--text);
+}
+
+:root{
   --bg:#0b1220;
   --card:#0f1b33;
   --card2:#0c1730;
@@ -239,6 +254,26 @@ a.mini-card {
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,.12);
   background: rgba(11,95,255,.06);
+}
+
+/* Force all text to stay readable on dark */
+p, li, td, th, label, span { color: var(--text); }
+.muted { color: var(--muted); }
+
+/* Fix the “white form” problem */
+input, select, textarea{
+  background: var(--input);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+input::placeholder, textarea::placeholder{
+  color: rgba(255,255,255,.55);
+}
+
+/* Ensure cards don’t turn white */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
 }
 
 .result .title { font-weight: 700; margin-bottom: 6px; }
