@@ -439,3 +439,30 @@ input:disabled {
     grid-template-columns:1fr 1fr 1fr;
   }
 }
+/* === HUB HERO INSIDE .container (Ecuador index) === */
+/* Make hero inside <main class="container"> behave like a card section */
+.container .hero{
+  background: linear-gradient(180deg, var(--card), var(--card2));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+  margin-top: 16px;
+}
+
+/* Tighten spacing so it doesn't look like a second header */
+.container .hero h1{
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+.container .hero .muted{
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* === FORCE ONE MUTED STYLE (stop flip-flopping) === */
+.muted, .small{
+  color: var(--muted) !important;
+}
+
